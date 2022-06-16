@@ -1,1 +1,5 @@
 dontaudit untrusted_app ashmem_device:chr_file open;
+
+# Neverallow: no domain should be allowed to ptrace init 
+# at system/sepolicy/public/init.te
+dontaudit crash_dump init:process ptrace;
