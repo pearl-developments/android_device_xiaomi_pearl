@@ -33,6 +33,12 @@ persist.sys.fuse.passthrough.enable=true
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 
+# Iorapd
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Kernel
 ro.kernel.zio=38,108,105,16
 
