@@ -164,6 +164,7 @@ ro.vendor.colorpick_adjust=true
 ro.vendor.histogram.enable=false
 ro.vendor.jpeg_decode_sw_opt=2
 ro.vendor.whitepoint_calibration_enable=false
+debug.sf.enable_egl_image_tracker=1
 
 # Display - Dynamic refresh rate
 ro.surface_flinger.set_display_power_timer_ms=1000
