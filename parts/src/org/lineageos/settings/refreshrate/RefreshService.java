@@ -35,7 +35,7 @@ import android.os.RemoteException;
 public class RefreshService extends Service {
 
     private static final String TAG = "RefreshService";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     private String mPreviousApp;
     private RefreshUtils mRefreshUtils;
