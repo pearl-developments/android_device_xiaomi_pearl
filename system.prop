@@ -22,6 +22,9 @@ dalvik.vm.dex2oat64.enabled=true
 # Disable MTE Async for system server
 arm64.memtag.process.system_server=off
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Display
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.enable_transaction_tracing=false
