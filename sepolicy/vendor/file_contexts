@@ -1,0 +1,129 @@
+# Arcsoft
+/vendor/lib(64)?/libArcNetMtk\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_beautyshot\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_distortion_correction\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_image\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_video\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_hdr_detection\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range_v5\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_low_light_hdr\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_mf_superresolution\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_sn_mtk_apu\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_super_night_raw\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_supernight\.so                u:object_r:same_process_hal_file:s0
+
+# Backlight
+/sys/class/leds/lcd-backlight(/.*)?     u:object_r:vendor_sysfs_backlight:s0
+
+# Camera
+/vendor/lib(64)?/com.xiaomi.plugin.arcsoftsr\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.bodyslim\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.capbokeh\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.dc\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.depurple\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.hdr\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.ldc\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.memcpy\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.miaideblur\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.miaihdr\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.miaiie\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.mibokeh\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.mifragment\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.misegment\.so          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.rawsuperlight\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.skinbeautifier\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.superlowlight\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.supernight\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/com.xiaomi.plugin.swflip\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalAILDC\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalAI_Seg\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalCFR\.so                             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalhLDC\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalLDC\.so                             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalNN_engine\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalNN_gpu\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalNN\.so                              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_dc_base\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_dc_plugin_xiaomi_v2\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_supervq\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libbeauty_face_interface\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libc\+\+_shared\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcom.xiaomi.pluginutils\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiai_deblur\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiai_portraitsupernight\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine2\.so                     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_ie_capture\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_utils\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmibokeh_mt6873\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiStereoFactoryRemapBasicLib\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmiStereoFactoryRemapLib\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmpbase\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_depth\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_dof\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_refocus\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_widelens_undistort\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/librelight_only\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libxmi_high_dynamic_range\.so            u:object_r:same_process_hal_file:s0
+
+# Charger
+/vendor/bin/batterysecret               u:object_r:batterysecret_exec:s0
+
+# Display
+/mnt/vendor/persist/display(/.*)?       u:object_r:vendor_persist_display_file:s0
+/data/vendor/display(/.*)?              u:object_r:vendor_display_vendor_data_file:s0
+/dev/mi_display/disp_feature            u:object_r:vendor_displayfeature_device:s0
+
+# Dolby
+/data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service               u:object_r:hal_dms_default_exec:s0
+/vendor/bin/hw/dolbycodec2                                                             u:object_r:vendorcodec_exec:s0
+
+# Fingerprint
+/sys/devices/platform/fingerprint(/.*)? u:object_r:vendor_sysfs_fp:s0
+/data/vendor/fpdump(/.*)?               u:object_r:vendor_fingerprint_data_file_fpdump:s0
+
+# Graphics
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?        u:object_r:vendor_sysfs_displayfeature:s0
+
+# Hals
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service u:object_r:hal_citsensorservice_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.xiaomi_mt6895   u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service    u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/mfp-daemon u:object_r:hal_fingerprint_default_exec:s0
+
+# Mitee
+/mnt/vendor/persist/data(/.*)?                    u:object_r:mitee_sfs_file:s0
+/dev/tee0                                         u:object_r:mitee_client_device:s0
+/dev/teepriv0                                     u:object_r:mitee_client_device:s0
+/dev/ufs-bsg0                                     u:object_r:mitee_client_device:s0
+
+# Mlipay
+/(vendor|system/vendor)/bin/mlipayd_mitee         u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd_isee          u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd_mitee@1.1     u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd_isee@1.1      u:object_r:hal_mlipay_default_exec:s0
+
+# NFC
+/dev/nq-nci  												u:object_r:nfc_device:s0
+/dev/p73     												u:object_r:nfc_device:s0
+
+# Power
+/dev/xiaomi-touch             u:object_r:vendor_touchfeature_device:s0
+
+# RPMB device
+/dev/0:0:0:49476  u:object_r:teei_rpmb_device:s0
+
+# Sensors
+/dev/elliptic0    u:object_r:sensors_device:s0
+/dev/elliptic1    u:object_r:sensors_device:s0
+
+# Set permissive
+/vendor/bin/set_permissive.sh                     u:object_r:set_permissive_exec:s0
+
+# Thermals
+/vendor/bin/mi_thermald       										u:object_r:mi_thermald_exec:s0

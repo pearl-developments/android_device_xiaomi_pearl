@@ -1,0 +1,1 @@
+allow mnld vendor_sysfs_backlight:lnk_file read;

@@ -1,0 +1,49 @@
+type hal_mlipay_default, domain;
+type hal_mlipay_hwservice, hwservice_manager_type;
+type hal_mlipay_default_exec, exec_type, vendor_file_type, file_type;
+
+type mitee_sfs_file, file_type;
+type mitee_client_device, dev_type, mlstrustedobject;
+
+vendor_public_prop(vendor_payment_security_prop)
+
+init_daemon_domain(hal_mlipay_default)
+hal_server_domain(hal_mlipay_default, hal_mlipay)
+
+# Allow hwbinder call from hal client to server
+binder_call(hal_mlipay_client, hal_mlipay_server)
+
+# Allow hwbinder call from hal server to client
+binder_call(hal_mlipay_server, hal_mlipay_client)
+
+# Add hwservice related rules
+add_hwservice(hal_mlipay_server, hal_mlipay_hwservice)
+allow hal_mlipay_client hal_mlipay_hwservice:hwservice_manager find;
+
+set_prop(hal_mlipay_default, vendor_payment_security_prop);
+
+get_prop(hal_mlipay_default, vendor_fp_prop)
+
+allow hal_mlipay_default {
+    tee_device
+    ion_device
+} :chr_file rw_file_perms;
+
+allow hal_mlipay_default {
+    mitee_sfs_file
+    persist_data_file
+}:dir { create_dir_perms relabelto};
+
+allow hal_mlipay_default mnt_vendor_file:dir { create_dir_perms relabelfrom };
+
+allow hal_mlipay_default {
+    mitee_sfs_file
+    persist_data_file
+}:file { create_file_perms relabelto };
+
+allow hal_mlipay_default rootfs:lnk_file r_file_perms;
+
+allow hal_mlipay_default {
+    mitee_client_device
+    teei_client_device
+}:chr_file rw_file_perms;

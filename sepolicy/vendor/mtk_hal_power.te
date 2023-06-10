@@ -1,0 +1,4 @@
+allow mtk_hal_power vendor_touchfeature_device:chr_file rw_file_perms;
+
+allow mtk_hal_power hal_fingerprint_default:dir r_dir_perms;
+allow mtk_hal_power hal_fingerprint_default:file r_file_perms;

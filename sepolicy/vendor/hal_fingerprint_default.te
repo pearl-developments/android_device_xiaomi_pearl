@@ -1,0 +1,23 @@
+type vendor_sysfs_fp, fs_type, sysfs_type;
+type vendor_fingerprint_data_file_fpdump, file_type, data_file_type;
+
+vendor_public_prop(vendor_fp_prop)
+vendor_restricted_prop(vendor_fp_info_prop)
+
+get_prop(hal_fingerprint_default, vendor_fp_prop)
+set_prop(hal_fingerprint_default, vendor_fp_prop)
+
+get_prop(hal_fingerprint_default, vendor_fp_info_prop)
+set_prop(hal_fingerprint_default, vendor_fp_info_prop)
+
+allow hal_fingerprint_default hal_fingerprint_hwservice:hwservice_manager find;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+allow hal_fingerprint_default property_socket:sock_file write;
+
+allow hal_fingerprint_default vendor_sysfs_fp:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_fp:file { ioctl read write open };
+
+allow hal_fingerprint_default vendor_fingerprint_data_file_fpdump:dir create_dir_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file_fpdump:file create_file_perms;
+
+hal_client_domain(hal_fingerprint_default, hal_power)

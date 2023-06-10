@@ -1,0 +1,27 @@
+type vendorcodec, domain;
+type vendorcodec_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(vendorcodec, hal_codec2)
+hal_client_domain(vendorcodec, hal_codec2)
+
+hal_client_domain(vendorcodec, hal_graphics_allocator)
+
+init_daemon_domain(vendorcodec)
+
+vndbinder_use(vendorcodec)
+
+allow vendorcodec storage_file:lnk_file read;
+allow vendorcodec mnt_user_file:dir search;
+allow vendorcodec mnt_user_file:lnk_file read;
+allow vendorcodec media_rw_data_file:file write;
+allow vendorcodec gpu_device:chr_file { ioctl read write open map getattr };
+allow vendorcodec tombstoned_crash_socket:sock_file write;
+allow vendorcodec tombstoned:unix_stream_socket connectto;
+allow vendorcodec tombstoned:fd use;
+allow vendorcodec tombstone_data_file:file append;
+allow vendorcodec dmabuf_system_heap_device:chr_file { ioctl read write open getattr };
+allow vendorcodec dmabuf_system_secure_heap_device:chr_file { ioctl read write open };
+allow vendorcodec proc_ged:file rw_file_perms;
+allow vendorcodec unlabeled:filesystem getattr;
+
+allowxperm vendorcodec proc_ged:file ioctl { proc_ged_ioctls };

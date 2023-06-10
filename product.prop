@@ -1,0 +1,20 @@
+# Bluetooth
+bluetooth.profile.bap.unicast.client.enabled=true
+bluetooth.profile.csip.set_coordinator.enabled=true
+bluetooth.profile.mcp.server.enabled=true
+bluetooth.profile.ccp.server.enabled=true
+bluetooth.profile.vcp.controller.enabled=true
+
+# Dex2oat
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.background-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.dex2oat-threads=4
+
+# Display
+debug.sf.disable_backpressure=1
+
+# Log
+persist.sys.mdlog_dumpback=2
+persist.vendor.mdlog.need_dump=1
+persist.vendor.mdlog.max_dump_file_count=10,*.muxz,*.bin

@@ -1,0 +1,8 @@
+# Display
+type vendor_displayfeature_device, dev_type;
+type vendor_sysfs_displayfeature, fs_type, sysfs_type;
+
+# Power supply
+type vendor_sysfs_battery_supply, fs_type, sysfs_type;
+type vendor_sysfs_usb_supply, fs_type, sysfs_type;
+type vendor_sysfs_usbpd_device, fs_type, sysfs_type;
