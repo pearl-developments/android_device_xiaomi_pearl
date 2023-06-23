@@ -29,6 +29,9 @@ debug.sf.enable_transaction_tracing=false
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# Feature flags
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # IPO
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
