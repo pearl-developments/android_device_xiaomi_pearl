@@ -537,4 +537,7 @@
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
+    <!-- Amount of time in ms the user needs to press the relevant keys to trigger the screenshot chord -->
+    <integer name="config_screenshotChordKeyTimeout">0</integer>
+
 </resources>
