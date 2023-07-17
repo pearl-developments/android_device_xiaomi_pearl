@@ -92,5 +92,8 @@ wifi.tethering.interface=ap0
 vendor.rild.libargs=-d /dev/ttyC0
 vendor.rild.libpath=mtk-ril.so
 
+# Radio
+persist.sys.radio.force_lte_ca=true
+
 # Render
 debug.cpurend.vsync=false
