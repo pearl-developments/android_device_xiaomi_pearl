@@ -1150,3 +1150,8 @@ service charger /system/bin/charger
     #seclabel u:r:charger:s0
     group system graphics
     seclabel u:r:healthd:s0
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
