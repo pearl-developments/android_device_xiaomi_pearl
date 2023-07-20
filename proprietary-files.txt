@@ -1987,7 +1987,6 @@ vendor/lib/librt_extamp_intf.so
 vendor/lib/libruy.so
 vendor/lib/libscltm.so
 vendor/lib/libsensor_cal.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libsimlock.so
 vendor/lib/libsimmelock.so
 vendor/lib/libsn100u_fw.so
@@ -2268,7 +2267,6 @@ vendor/lib64/libruy.so
 vendor/lib64/libscltm.so
 vendor/lib64/libsdk_sr.so
 vendor/lib64/libsensor_cal.so
-vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsimlock.so
 vendor/lib64/libsimmelock.so
 vendor/lib64/libsmartcharging.so
@@ -2627,8 +2625,6 @@ vendor/etc/security/cacerts_supl/lab/ed7b215e.0
 vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/lib/hw/sensors.elliptic@2.0.so
 vendor/lib/libnotifyaudiohal.so
 vendor/lib/sensors.touch.detect.so
@@ -2638,9 +2634,6 @@ vendor/lib64/hw/sensors.mediatek.V2.0.so
 vendor/lib64/libksensor.so
 vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/sensors.touch.detect.so
-
-# Sensors configs
-vendor/etc/sensors/hals.conf
 
 # Soter (Tencent)
 vendor/app/SoterService/SoterService.apk
