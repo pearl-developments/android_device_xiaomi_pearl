@@ -176,7 +176,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss-V1-ndk.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -253,7 +254,6 @@ PRODUCT_COPY_FILES += \
 
 # NDK Platform backend
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V1-ndk_platform.vendor:64 \
     android.hardware.memtrack-V1-ndk_platform.vendor:64 \
     android.hardware.power-V2-ndk_platform.vendor:64 \
     android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
