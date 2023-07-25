@@ -53,6 +53,9 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
+# LMKD
+ro.config.low_ram=false
+
 # Logcat
 persist.log.tag.gralloc4=S   
 
