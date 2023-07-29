@@ -136,28 +136,21 @@ drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 
 # Display
-debug.sf.disable_client_composition_cache=1
-debug.sf.enable_hwc_vds=0
-debug.sf.early.app.duration=24000000
-debug.sf.early.sf.duration=30000000
-debug.sf.earlyGl.app.duration=24000000
-debug.sf.earlyGl.sf.duration=30000000
-debug.sf.hwc.min.duration=23000000
-debug.sf.late.app.duration=24000000
-debug.sf.late.sf.duration=30000000
-debug.sf.high_fps.early.app.duration=10000000
-debug.sf.high_fps.early.sf.duration=13800000
-debug.sf.high_fps.earlyGl.app.duration=10000000
-debug.sf.high_fps.earlyGl.sf.duration=13800000
-debug.sf.high_fps.hwc.min.duration=8500000
-debug.sf.high_fps.late.app.duration=10000000
-debug.sf.high_fps.late.sf.duration=13800000
-debug.sf.auto_latch_unsignaled=true
 ro.opengles.version=196610
+ro.hardware.egl=meow
+debug.hwui.renderer=opengl
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.skia_atrace_enabled=false
+debug.sf.disable_client_composition_cache=1
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.enable_transaction_tracing=false
+debug.sf.enable_hwc_vds=0
+debug.sf.auto_latch_unsignaled=true
+debug.sf.latch_unsignaled=false
 ro.surface_flinger.has_wide_color_display=true
+debug.sf.disable_backpressure=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
-ro.surface_flinger.protected_contents=true
 ro.surface_flinger.uclamp.min=180
 ro.vendor.all_modes.colorpick_adjust=true
 ro.vendor.colorpick_adjust=true
@@ -166,24 +159,16 @@ ro.vendor.jpeg_decode_sw_opt=2
 ro.vendor.whitepoint_calibration_enable=false
 debug.sf.enable_egl_image_tracker=1
 
-# EGL
-ro.hardware.egl=meow
+# Display - Dynamic refresh rate
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=250
+ro.surface_flinger.set_touch_timer_ms=200
+vendor.display.idle_time=0
+vendor display.idle_time_inactive=0
+vendor.display.disable_metadata_dynamic_fps=1
 
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
-
-# IMS
-persist.vendor.ims.disableADBLogs=1
-persist.vendor.ims.disableDebugLogs=1
-persist.vendor.ims.disableIMSLogs=1
-persist.vendor.ims.disableQXDMLogs=1
-
-# Media
-media.stagefright.thumbnail.prefer_hw_codecs=true
-debug.config.media.video.frc.support=true
-debug.config.media.video.aie.support=true
-debug.config.media.video.ais.support=true
-ro.vendor.mtk_video_hevc_enc_support=1
 
 # Haptic (Extracted from xaga-sound module)
 sys.haptic.motor=linear
@@ -212,6 +197,10 @@ sys.haptic.hold=1,2
 sys.haptic.runin=13
 
 # IMS
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableQXDMLogs=1
 persist.vendor.ims_support=1
 persist.vendor.mims_support=2
 persist.vendor.mtk.volte.enable=1
@@ -224,6 +213,23 @@ persist.vendor.viwifi_support=1
 persist.vendor.volte_support=1
 persist.vendor.vonr_setting_support=1
 ro.vendor.md_auto_setup_ims=1
+
+# LMK
+ro.lmk.psi_complete_stall_ms=150
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.thrashing_limit=25
+ro.lmk.thrashing_limit_decay=50
+ro.lmk.limit_killing_array_kb=819200,819200,655360,655360
+ro.lmk.swap_util_max=90
+ro.lmk.psi_complete_stall_ms_dup=70
+ro.lmk.kill_timeout_ms=100
+ro.lmk.nandswap_version=2
+ro.lmk.psi_scrit_complete_stall_ms=150
+ro.lmk.swap_is_low_kill_enable=1
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.vendor.mtk_video_hevc_enc_support=1
 
 # Netflix
 ro.netflix.bsp_rev=MTK6895-35027-1
@@ -292,7 +298,6 @@ ro.hardware.wlan.chip=mt663x
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
-debug.mediatek.high_frame_rate_sf_set_big_core_fps_threshold=119
 debug.mtk_tflite.target_nnapi=29
 graphics.gpu.profiler.support=true
 init.userspace_reboot.is_supported=true
@@ -351,8 +356,6 @@ ro.incremental.enable=yes
 ro.lmk.kill_timeout_ms=100
 ro.lmk.psi_complete_stall_ms=150
 ro.lmk.psi_partial_stall_ms=80
-ro.lmk.swap_free_low_percentage=40
-ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
 ro.logd.kernel=false
 ro.logd.size=2M
