@@ -1,1 +1,4 @@
 allow mtk_hal_sensors sysfs_palm_sensor:file rw_file_perms;
+
+# Allow mtk_hal_sensors to read/write to sensor device
+allow mtk_hal_sensors sensor_device:chr_file rw_file_perms;
