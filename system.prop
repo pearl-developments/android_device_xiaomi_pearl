@@ -4,8 +4,10 @@ ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
 # Blur
-ro.sf.blurs_are_expensive=1
-ro.surface_flinger.supports_background_blur=1
+persist.sys.sf.disable_blurs=1
+ro.launcher.blur.appLaunch=0
+ro.sf.blurs_are_expensive=0
+ro.surface_flinger.supports_background_blur=0
 
 # Brand
 Build.BRAND=MTK
@@ -13,10 +15,10 @@ Build.BRAND=MTK
 # Camera
 persist.camera.HAL3.enabled=1
 persist.camera.eis.enabled=1
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.lineageos.aperture
-vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.lineageos.aperture
 ro.camera.sound.forced=0
+vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.lineageos.aperture
 
 # Dexopt
 dalvik.vm.dex2oat64.enabled=true
@@ -35,10 +37,10 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 
 # Iorapd
-ro.iorapd.enable=false
 iorapd.perfetto.enable=false
 iorapd.readahead.enable=false
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+ro.iorapd.enable=false
 
 # Kernel
 ro.kernel.zio=38,108,105,16
@@ -56,15 +58,6 @@ persist.log.tag.gralloc4=S
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
-media.aac_51_output_enabled=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-mmp.enable.3g2=true
-persist.mm.enable.prefetch=true
 
 # USB
 ro.sys.usb.bicr=no
@@ -93,16 +86,16 @@ vendor.rild.libpath=mtk-ril.so
 # Radio
 persist.sys.radio.force_lte_ca=true
 
-# Better Ram
-ro.config.fha_enable=true
-ro.sys.fw.bg_apps_limit=32
+# Ram Improvement
 ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
 ro.config.dha_empty_init=32
+ro.config.dha_empty_max=42
 ro.config.dha_lmk_scale=0.545
 ro.config.dha_th_rate=2.3
+ro.config.fha_enable=true
 ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
+ro.sys.fw.bg_apps_limit=32
 
 # Render
 debug.cpurend.vsync=false

@@ -57,7 +57,9 @@ vendor/lib64/libladder.so
 etc/audio_effects.conf
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/a2dp_in_audio_policy_configuration.xml
+vendor/etc/audio_device.xml
 vendor/etc/audio_effects.xml
+vendor/etc/audio_policy.conf
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml
 vendor/etc/audio_policy_configuration_a2dp_offload_disabled_cg_enabled.xml
@@ -70,10 +72,8 @@ vendor/etc/bluetooth_offload_audio_policy_configuration.xml
 vendor/etc/bluetooth_ums_offload_audio_policy_configuration.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
-vendor/etc/usb_audio_policy_configuration.xml
-vendor/etc/audio_device.xml
-vendor/etc/audio_policy.conf
 vendor/etc/usb_audio_accessory_only_policy_configuration.xml
+vendor/etc/usb_audio_policy_configuration.xml
 
 
 # Audio effect
@@ -233,6 +233,7 @@ vendor/lib/libSQLiteModule_VER_ALL.so
 vendor/lib/libaedv.so
 vendor/lib/libapu_mdw.so
 vendor/lib/libcamalgo.utility.so
+vendor/lib/libcamerasensorinfoxiaomi.so
 vendor/lib/libged.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libhfmanager.so
@@ -300,6 +301,42 @@ vendor/lib/mt6895/libvcodec_utility.so
 vendor/lib/mt6895/libvcodecdrv.so
 vendor/lib/mt6895/mtk000_mipi_raw_IdxMgr.so
 vendor/lib/mt6895/mtk000_mipi_raw_tuning.so
+vendor/lib/mt6895/xagagc02m1_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagagc02m1_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagagc02m1_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagagc02m1_mipi_raw_tuning.so
+vendor/lib/mt6895/xagaov02b10_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagaov02b10_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagaov02b10_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagaov02b10_mipi_raw_tuning.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_2_IdxMgr.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_2_tuning.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_4_IdxMgr.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_4_tuning.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagaov16a1_mipi_raw_tuning.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_2_IdxMgr.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_2_tuning.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_4_IdxMgr.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_4_tuning.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagas5k4h7_mipi_raw_tuning.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_2_IdxMgr.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_2_tuning.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_4_IdxMgr.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_4_tuning.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagas5kgw1_mipi_raw_tuning.so
+vendor/lib/mt6895/xagas5khm2_mipi_raw_3_IdxMgr.so
+vendor/lib/mt6895/xagas5khm2_mipi_raw_3_tuning.so
+vendor/lib/mt6895/xagas5khm2_mipi_raw_IdxMgr.so
+vendor/lib/mt6895/xagas5khm2_mipi_raw_tuning.so
 vendor/lib/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -322,8 +359,12 @@ vendor/lib64/libanc_calibration_parser.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_supervq.so
 vendor/lib64/libapu_mdw.so
+vendor/lib64/libarcbokeh.preview.so
 vendor/lib64/libarcsoft_beautyshot.so
+vendor/lib64/libarcsoft_dualcam_refocus_image.so
+vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_hdr_detection.so
+vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcam.hal3a.guard.so
@@ -343,6 +384,7 @@ vendor/lib64/libcamalgo.vsdofUtil.so
 vendor/lib64/libcamalgo.warp.so
 vendor/lib64/libcamera_scene.so
 vendor/lib64/libcameraplatforminfoxiaomi.so
+vendor/lib64/libcamerasensorinfoxiaomi.so
 vendor/lib64/libfeature.hdr10.so
 vendor/lib64/libfeaturepolicy.so
 vendor/lib64/libfeaturepolicy_dbhandler.so
@@ -425,6 +467,7 @@ vendor/lib64/mt6895/libaidepth_tuning.so
 vendor/lib64/mt6895/libaiselector.so
 vendor/lib64/mt6895/libalgo.aosp.log.so
 vendor/lib64/mt6895/libapudcutils.so
+vendor/lib64/mt6895/libcam.3a_isp.utils.so
 vendor/lib64/mt6895/libcam.afmgr.so
 vendor/lib64/mt6895/libcam.chdr.so
 vendor/lib64/mt6895/libcam.feature_utils.so
@@ -482,6 +525,7 @@ vendor/lib64/mt6895/libcamalgo.ainr.so
 vendor/lib64/mt6895/libcamalgo.ais2.bss.so
 vendor/lib64/mt6895/libcamalgo.ais2.mfnr.so
 vendor/lib64/mt6895/libcamalgo.ais2.mstm.so
+vendor/lib64/mt6895/libcamalgo.ais2.so
 vendor/lib64/mt6895/libcamalgo.bss.so
 vendor/lib64/mt6895/libcamalgo.fus.so
 vendor/lib64/mt6895/libcamalgo.lsc.so
@@ -660,62 +704,6 @@ vendor/lib64/mt6895/libstereoinfoaccessor_vsdof.so
 vendor/lib64/mt6895/libvainr_model.so
 vendor/lib64/mt6895/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/mt6895/mtk000_mipi_raw_tuning.so
-vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
-vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.device@3.6.so
-vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
-vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
-vendor/lib/libcamerasensorinfoxiaomi.so
-vendor/lib/mt6895/xagagc02m1_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagagc02m1_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagagc02m1_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagagc02m1_mipi_raw_tuning.so
-vendor/lib/mt6895/xagaov02b10_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagaov02b10_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagaov02b10_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagaov02b10_mipi_raw_tuning.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_2_IdxMgr.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_2_tuning.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_4_IdxMgr.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_4_tuning.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagaov16a1_mipi_raw_tuning.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_2_IdxMgr.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_2_tuning.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_4_IdxMgr.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_4_tuning.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagas5k4h7_mipi_raw_tuning.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_2_IdxMgr.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_2_tuning.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_4_IdxMgr.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_4_tuning.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagas5kgw1_mipi_raw_tuning.so
-vendor/lib/mt6895/xagas5khm2_mipi_raw_3_IdxMgr.so
-vendor/lib/mt6895/xagas5khm2_mipi_raw_3_tuning.so
-vendor/lib/mt6895/xagas5khm2_mipi_raw_IdxMgr.so
-vendor/lib/mt6895/xagas5khm2_mipi_raw_tuning.so
-vendor/lib64/libarcbokeh.preview.so
-vendor/lib64/libarcsoft_dualcam_refocus_image.so
-vendor/lib64/libarcsoft_dualcam_refocus_video.so
-vendor/lib64/libarcsoft_high_dynamic_range.so
-vendor/lib64/libcamerasensorinfoxiaomi.so
-vendor/lib64/mt6895/libcam.3a_isp.utils.so
-vendor/lib64/mt6895/libcamalgo.ais2.so
 vendor/lib64/mt6895/xagagc02m1_mipi_raw_3_IdxMgr.so
 vendor/lib64/mt6895/xagagc02m1_mipi_raw_3_tuning.so
 vendor/lib64/mt6895/xagagc02m1_mipi_raw_IdxMgr.so
@@ -752,7 +740,18 @@ vendor/lib64/mt6895/xagas5khm2_mipi_raw_3_IdxMgr.so
 vendor/lib64/mt6895/xagas5khm2_mipi_raw_3_tuning.so
 vendor/lib64/mt6895/xagas5khm2_mipi_raw_IdxMgr.so
 vendor/lib64/mt6895/xagas5khm2_mipi_raw_tuning.so
-
+vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
+vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.device@3.6.so
+vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
+vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 
 # Camera configs
 vendor/etc/camera/102_SummerDay.png
@@ -786,6 +785,9 @@ vendor/etc/camera/almalence_sr_params_tele.config
 vendor/etc/camera/almalence_sr_params_wide.config
 vendor/etc/camera/anc.bin
 vendor/etc/camera/apu_miai_preview.bin
+vendor/etc/camera/cal_w_uw_L16_golden_108m
+vendor/etc/camera/cal_w_uw_L16_golden_64m_i
+vendor/etc/camera/cal_w_uw_L16_golden_64m_ii
 vendor/etc/camera/deblur_sd_opencl_binary.bin
 vendor/etc/camera/deblur_sd_opencl_params.bin
 vendor/etc/camera/deblur_txt_apu.bin
@@ -814,9 +816,6 @@ vendor/etc/camera/xiaomi/superhdsnapshot.json
 vendor/etc/camera/xiaomi/superlowlightsnapshot.json
 vendor/etc/camera/xiaomi/thirdpartysnapshot.json
 vendor/etc/camera/xiaomi/uwsuperlowlightshot.json
-vendor/etc/camera/cal_w_uw_L16_golden_108m
-vendor/etc/camera/cal_w_uw_L16_golden_64m_i
-vendor/etc/camera/cal_w_uw_L16_golden_64m_ii
 
 # Camera parameter database
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6895/ParameterDB_ae.db
@@ -899,7 +898,7 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/xagas5khm2_mipi_raw/mt68
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/xagas5khm2_mipi_raw_3/mt6895/ISP_mapping.db
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/xagas5khm2_mipi_raw_3/mt6895/ISP_param.db
 
-# Charger (Xiaomi)
+# Charger
 lib/vendor.xiaomi.hardware.micharge@1.0.so
 lib64/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/bin/batterysecret
@@ -1027,7 +1026,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
-# Display (Xiaomi)
+# Display
 lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
@@ -1280,8 +1279,13 @@ vendor/firmware/92_notificationRemove_RTP.bin
 vendor/firmware/93_notificationCleanall_RTP.bin
 vendor/firmware/96_nfcCard_RTP.bin
 vendor/firmware/98_nfcCardSlow_RTP.bin
+vendor/firmware/99_POCO_RTP.bin
 vendor/firmware/9_ringTone4_P_RTP.bin
 vendor/firmware/BT_FW.cfg
+vendor/firmware/NT36xxx_MP_Setting_Criteria_5950.csv
+vendor/firmware/NT36xxx_MP_Setting_Criteria_5952.csv
+vendor/firmware/NT36xxx_MP_Setting_Criteria_5969.csv
+vendor/firmware/NT36xxx_MP_Setting_Criteria_596A.csv
 vendor/firmware/WIFI_RAM_CODE_soc7_0_1b_1.bin
 vendor/firmware/WIFI_RAM_CODE_soc7_0_1b_t_1.bin
 vendor/firmware/WIFI_RAM_CODE_soc7_0_1c_1.bin
@@ -1289,48 +1293,6 @@ vendor/firmware/aw8697_haptic.bin
 vendor/firmware/aw8697_rtp_1.bin
 vendor/firmware/conninfra.cfg
 vendor/firmware/fm_cust.cfg
-vendor/firmware/lib3a.ccu
-vendor/firmware/lib3a.ccu_dummy
-vendor/firmware/mali_csffw.bin
-vendor/firmware/mali_csffw_reload.bin
-vendor/firmware/mono.cnt
-vendor/firmware/mt6627_fm_v1_coeff.bin
-vendor/firmware/mt6627_fm_v1_patch.bin
-vendor/firmware/mt6630_fm_v1_coeff.bin
-vendor/firmware/mt6630_fm_v1_patch.bin
-vendor/firmware/mt6630_fm_v2_coeff.bin
-vendor/firmware/mt6630_fm_v2_coeff_tx.bin
-vendor/firmware/mt6630_fm_v2_patch.bin
-vendor/firmware/mt6630_fm_v2_patch_tx.bin
-vendor/firmware/mt6631_fm_v1_coeff.bin
-vendor/firmware/mt6631_fm_v1_patch.bin
-vendor/firmware/mt6632_fm_v1_coeff.bin
-vendor/firmware/mt6632_fm_v1_patch.bin
-vendor/firmware/mt6635_fm_v1_coeff.bin
-vendor/firmware/mt6635_fm_v1_patch.bin
-vendor/firmware/remoteproc_scp
-vendor/firmware/soc7_0_ram_bt_1_1_hdr.bin
-vendor/firmware/soc7_0_ram_bt_1_t_1_hdr.bin
-vendor/firmware/soc7_0_ram_bt_1a_1_hdr.bin
-vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
-vendor/firmware/soc7_0_ram_bt_1b_t_1_hdr.bin
-vendor/firmware/soc7_0_ram_mcu_1_1_hdr.bin
-vendor/firmware/soc7_0_ram_mcu_1_t_1_hdr.bin
-vendor/firmware/soc7_0_ram_mcu_1a_1_hdr.bin
-vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin
-vendor/firmware/soc7_0_ram_mcu_1b_t_1_hdr.bin
-vendor/firmware/soc7_0_ram_wmmcu_1b_1_hdr.bin
-vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
-vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
-vendor/firmware/soc_fm_v1_coeff.bin
-vendor/firmware/soc_fm_v1_patch.bin
-vendor/firmware/tfa98xx.cnt
-vendor/firmware/wifi.cfg
-vendor/firmware/99_POCO_RTP.bin
-vendor/firmware/NT36xxx_MP_Setting_Criteria_5950.csv
-vendor/firmware/NT36xxx_MP_Setting_Criteria_5952.csv
-vendor/firmware/NT36xxx_MP_Setting_Criteria_5969.csv
-vendor/firmware/NT36xxx_MP_Setting_Criteria_596A.csv
 vendor/firmware/gt9886_cfg_6781v01.bin
 vendor/firmware/gt9886_cfg_6785v96.bin
 vendor/firmware/gt9886_cfg_6785v99.bin
@@ -1388,6 +1350,25 @@ vendor/firmware/gt9896s_firmware_6893v04.bin
 vendor/firmware/gt9896s_firmware_6893v05.bin
 vendor/firmware/gt9896s_firmware_6895v01.bin
 vendor/firmware/gt9896s_firmware_6983v01.bin
+vendor/firmware/lib3a.ccu
+vendor/firmware/lib3a.ccu_dummy
+vendor/firmware/mali_csffw.bin
+vendor/firmware/mali_csffw_reload.bin
+vendor/firmware/mono.cnt
+vendor/firmware/mt6627_fm_v1_coeff.bin
+vendor/firmware/mt6627_fm_v1_patch.bin
+vendor/firmware/mt6630_fm_v1_coeff.bin
+vendor/firmware/mt6630_fm_v1_patch.bin
+vendor/firmware/mt6630_fm_v2_coeff.bin
+vendor/firmware/mt6630_fm_v2_coeff_tx.bin
+vendor/firmware/mt6630_fm_v2_patch.bin
+vendor/firmware/mt6630_fm_v2_patch_tx.bin
+vendor/firmware/mt6631_fm_v1_coeff.bin
+vendor/firmware/mt6631_fm_v1_patch.bin
+vendor/firmware/mt6632_fm_v1_coeff.bin
+vendor/firmware/mt6632_fm_v1_patch.bin
+vendor/firmware/mt6635_fm_v1_coeff.bin
+vendor/firmware/mt6635_fm_v1_patch.bin
 vendor/firmware/novatek_nt36672e_l16_fw01.bin
 vendor/firmware/novatek_nt36672e_l16_fw02.bin
 vendor/firmware/novatek_nt36672e_l16_mp01.bin
@@ -1400,7 +1381,25 @@ vendor/firmware/novatek_ts_fw_jdi.bin
 vendor/firmware/novatek_ts_fw_tm.bin
 vendor/firmware/novatek_ts_mp01.bin
 vendor/firmware/novatek_ts_mp02.bin
+vendor/firmware/remoteproc_scp
+vendor/firmware/soc7_0_ram_bt_1_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1_t_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1a_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_t_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1_t_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1a_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1b_t_1_hdr.bin
+vendor/firmware/soc7_0_ram_wmmcu_1b_1_hdr.bin
+vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
+vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
+vendor/firmware/soc_fm_v1_coeff.bin
+vendor/firmware/soc_fm_v1_patch.bin
+vendor/firmware/tfa98xx.cnt
 vendor/firmware/txpowerctrl.cfg
+vendor/firmware/wifi.cfg
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
@@ -1465,76 +1464,6 @@ vendor/lib64/lib_android_keymaster_keymint_utils.so
 vendor/lib64/libkeymint.so
 vendor/lib64/wechat.beanpod.so
 
-# MIUI Camera
-#lib64/libcamera_algoup_jni.xiaomi.so
-#lib64/libcamera_ispinterface_jni.xiaomi.so
-#lib64/libcamera_mianode_jni.xiaomi.so
-#lib64/libcameraservice.so
-#lib64/libcamera_client.so
-#lib64/libmtkisp_metadata_sys.so
-#lib64/libcamera_metadata.so
-#lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
-#-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Snap,GoogleCameraGo,Camera2,Aperture
-#system_ext/lib64/libcameraimpl.so
-#system_ext/lib64/libopencl-camera.so
-#system_ext/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
-
-# Miscellaneous
-vendor/bin/FlashCompareAPI
-vendor/etc/device_sar_config.xml
-vendor/etc/dsi_l16_36_02_0b_dsc_vdo_mi.xml
-vendor/etc/dsi_l16_42_02_0a_dsc_vdo_mi.xml
-vendor/etc/init/ddr_training.rc
-vendor/etc/init/xaga_display.rc
-vendor/lib/c2.dolby.avc.dec.so
-vendor/lib/c2.dolby.avc.sec.dec.so
-vendor/lib/c2.dolby.client.so
-vendor/lib/c2.dolby.egl.so
-vendor/lib/c2.dolby.hevc.dec.so
-vendor/lib/c2.dolby.hevc.sec.dec.so
-vendor/lib/c2.dolby.store.so
-vendor/lib/libai_sdr2hdr_auth.so
-vendor/lib/libdolbyottcameracontrol.so
-vendor/lib/libdolbyvision.so
-vendor/lib64/com.xiaomi.plugin.hdr.so
-vendor/lib64/libai_sdr2hdr_auth.so
-vendor/lib64/libflash_compare.so
-
-# MTK-IMS
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-common.jar
--framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-base.jar
--framework/mediatek-telephony-common.jar
--priv-app/ImsService/ImsService.apk
-bin/vtservice
-etc/init/init.vtservice.rc
-framework/mediatek-ims-extension-plugin.jar
-lib/libmtk_vt_wrapper.so
-lib/libmtkperf_client.so
-lib/libsysenv_system.so
-lib/libvcodec_cap.so
-lib/libvcodec_capenc.so
-lib64/libcomutils.so
-lib64/libimsma.so
-lib64/libimsma_adapt.so
-lib64/libimsma_rtp.so
-lib64/libimsma_socketwrapper.so
-lib64/libmtk_vt_service.so
-lib64/libmtk_vt_wrapper.so
-lib64/libmtkperf_client.so
-lib64/libsignal.so
-lib64/libsink.so
-lib64/libsource.so
-lib64/libsysenv_system.so
-lib64/libvcodec_cap.so
-lib64/libvcodec_capenc.so
-lib64/libvt_avsync.so
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-
 # Media (Codec2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
@@ -1568,6 +1497,16 @@ vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libstagefright_bufferpool@2.0.1.so
+
+# Media configs
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_c2.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_mediatek_audio.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_codecs_system_default.xml
+vendor/etc/media_profiles_V1_0.xml
 
 # Media (OMX)
 etc/seccomp_policy/mediacodec.policy
@@ -1604,22 +1543,54 @@ vendor/lib64/libstagefright_softomx.so
 vendor/lib64/libstagefrightdolby.so
 vendor/lib64/libstagefrighthw.so
 
-# Vibrator (Xiaomi)
-vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
-vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
-vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
-vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so
+# MIUI Camera
+#-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Snap,GoogleCameraGo,Camera2,Aperture
+#lib64/libcamera_algoup_jni.xiaomi.so
+#lib64/libcamera_client.so
+#lib64/libcamera_ispinterface_jni.xiaomi.so
+#lib64/libcamera_metadata.so
+#lib64/libcamera_mianode_jni.xiaomi.so
+#lib64/libcameraservice.so
+#lib64/libmtkisp_metadata_sys.so
+#lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+#system_ext/lib64/libcameraimpl.so
+#system_ext/lib64/libopencl-camera.so
+#system_ext/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 
-# Media configs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_codecs_system_default.xml
-vendor/etc/media_profiles_V1_0.xml
+# MTK-IMS
+-framework/mediatek-common.jar
+-framework/mediatek-framework.jar
+-framework/mediatek-ims-base.jar
+-framework/mediatek-ims-common.jar
+-framework/mediatek-telecom-common.jar
+-framework/mediatek-telephony-base.jar
+-framework/mediatek-telephony-common.jar
+-priv-app/ImsService/ImsService.apk
+bin/vtservice
+etc/init/init.vtservice.rc
+framework/mediatek-ims-extension-plugin.jar
+lib/libmtk_vt_wrapper.so
+lib/libmtkperf_client.so
+lib/libsysenv_system.so
+lib/libvcodec_cap.so
+lib/libvcodec_capenc.so
+lib64/libcomutils.so
+lib64/libimsma.so
+lib64/libimsma_adapt.so
+lib64/libimsma_rtp.so
+lib64/libimsma_socketwrapper.so
+lib64/libmtk_vt_service.so
+lib64/libmtk_vt_wrapper.so
+lib64/libmtkperf_client.so
+lib64/libsignal.so
+lib64/libsink.so
+lib64/libsource.so
+lib64/libsysenv_system.so
+lib64/libvcodec_cap.so
+lib64/libvcodec_capenc.so
+lib64/libvt_avsync.so
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Miscellaneous
 vendor/app/IFAAService/IFAAService.apk
@@ -1627,6 +1598,7 @@ vendor/app/MipayService/MipayService.apk
 vendor/app/SensorTestTool/SensorTestTool.apk
 vendor/bin/AgentTest
 vendor/bin/DFtool
+vendor/bin/FlashCompareAPI
 vendor/bin/Ois_Tset_Factory_White
 vendor/bin/SMBlemishAnalyzer_new
 vendor/bin/SoterProvisioningTool_isee
@@ -1755,7 +1727,10 @@ vendor/etc/cust_color.xml
 vendor/etc/cust_color_36.xml
 vendor/etc/cust_color_42.xml
 vendor/etc/default_pd_calibration.bin
+vendor/etc/device_sar_config.xml
 vendor/etc/dolby_vision.cfg
+vendor/etc/dsi_l16_36_02_0b_dsc_vdo_mi.xml
+vendor/etc/dsi_l16_42_02_0a_dsc_vdo_mi.xml
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml
 vendor/etc/ecc_list_OP02.xml
@@ -1778,6 +1753,7 @@ vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/chipinfo_init.rc
+vendor/etc/init/ddr_training.rc
 vendor/etc/init/displayfeature.rc
 vendor/etc/init/dmc_core.rc
 vendor/etc/init/eara-io-service.rc
@@ -1841,6 +1817,7 @@ vendor/etc/init/vendor.xiaomi.sensor.communicate@1.0-service.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/init/volte_rcs_ua.rc
 vendor/etc/init/wlan_assistant.rc
+vendor/etc/init/xaga_display.rc
 vendor/etc/meow.cfg
 vendor/etc/mi_thermal_break.cfg
 vendor/etc/mimdconfig
@@ -1910,6 +1887,13 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/etc/wfd_source_capability.csv
 vendor/etc/xgf.cfg
 vendor/framework/com.fingerprints.extension.jar
+vendor/lib/c2.dolby.avc.dec.so
+vendor/lib/c2.dolby.avc.sec.dec.so
+vendor/lib/c2.dolby.client.so
+vendor/lib/c2.dolby.egl.so
+vendor/lib/c2.dolby.hevc.dec.so
+vendor/lib/c2.dolby.hevc.sec.dec.so
+vendor/lib/c2.dolby.store.so
 vendor/lib/hw/audio_policy.stub.so
 vendor/lib/hw/gps.default.so
 vendor/lib/hw/libSoftGatekeeper.so
@@ -1938,6 +1922,7 @@ vendor/lib/libaal_mtk.so
 vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libai_pq.so
 vendor/lib/libai_sdr2hdr.so
+vendor/lib/libai_sdr2hdr_auth.so
 vendor/lib/libaispq.so
 vendor/lib/libalacdec_mtk.so
 vendor/lib/libapmonitor_vendor.so
@@ -1979,6 +1964,8 @@ vendor/lib/libcustom_nvram.so
 vendor/lib/libdecrypt.so
 vendor/lib/libdisplayfeature.so
 vendor/lib/libdisplayfeatureservice.so
+vendor/lib/libdolbyottcameracontrol.so
+vendor/lib/libdolbyvision.so
 vendor/lib/libdre.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libfgauge_gm30.so
@@ -2131,6 +2118,7 @@ vendor/lib64/com.xiaomi.plugin.arcsoftsr.so
 vendor/lib64/com.xiaomi.plugin.capbokeh.so
 vendor/lib64/com.xiaomi.plugin.dc.so
 vendor/lib64/com.xiaomi.plugin.depurple.so
+vendor/lib64/com.xiaomi.plugin.hdr.so
 vendor/lib64/com.xiaomi.plugin.ldc.so
 vendor/lib64/com.xiaomi.plugin.memcpy.so
 vendor/lib64/com.xiaomi.plugin.miaideblur.so
@@ -2184,6 +2172,7 @@ vendor/lib64/libaal_mtk.so
 vendor/lib64/libadpcmdec_mtk.so
 vendor/lib64/libai_pq.so
 vendor/lib64/libai_sdr2hdr.so
+vendor/lib64/libai_sdr2hdr_auth.so
 vendor/lib64/libaispq.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalacdec_mtk.so
@@ -2246,6 +2235,7 @@ vendor/lib64/libdynamiclog.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libfgauge_gm30.so
 vendor/lib64/libfile_op.so
+vendor/lib64/libflash_compare.so
 vendor/lib64/libflatbuffers-cpp.so
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libfvaudio.so
@@ -2460,7 +2450,7 @@ vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/lib/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so
 
-# Payment (Xiaomi)
+# Payment
 vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-iseeservice.rc
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-iseeservice.rc
 vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-iseeservice.rc
@@ -2747,14 +2737,12 @@ lib64/libterservice.so
 
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
+vendor/bin/mi_thermald
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
 vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
-
-# Thermal (Xiaomi)
-vendor/bin/mi_thermald
 
 # Thermal configs
 vendor/etc/thermal-4k.conf
@@ -3082,6 +3070,13 @@ vendor_dlkm/lib/modules/xiaomi_touch.ko
 vendor_dlkm/lib/modules/zram.ko
 vendor_dlkm/lib/modules/zsmalloc.ko
 
+# Vibrator
+vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
+vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
+vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so
+
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/hw/hostapd
@@ -3102,4 +3097,3 @@ vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/passpointProfile.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
-
