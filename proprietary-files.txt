@@ -1480,14 +1480,8 @@ vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libstagefright_bufferpool@2.0.1.so
 
 # Media configs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_system_default.xml
-vendor/etc/media_profiles_V1_0.xml
 
 # Media (OMX)
 etc/seccomp_policy/mediacodec.policy
