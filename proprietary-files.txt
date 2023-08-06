@@ -55,26 +55,7 @@ vendor/lib64/libladder.so
 
 # Audio configs
 etc/audio_effects.conf
-vendor/etc/a2dp_audio_policy_configuration.xml
-vendor/etc/a2dp_in_audio_policy_configuration.xml
-vendor/etc/audio_device.xml
-vendor/etc/audio_effects.xml
-vendor/etc/audio_policy.conf
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml
-vendor/etc/audio_policy_configuration_a2dp_offload_disabled_cg_enabled.xml
-vendor/etc/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml
-vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml
-vendor/etc/bluetooth_audio_policy_configuration.xml
-vendor/etc/bluetooth_offload_audio_policy_configuration.xml
-vendor/etc/bluetooth_ums_offload_audio_policy_configuration.xml
 vendor/etc/default_volume_tables.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
-vendor/etc/usb_audio_accessory_only_policy_configuration.xml
-vendor/etc/usb_audio_policy_configuration.xml
-
 
 # Audio effect
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
