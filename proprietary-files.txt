@@ -1479,10 +1479,6 @@ vendor/lib64/libformatter.so
 vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libstagefright_bufferpool@2.0.1.so
 
-# Media configs
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_system_default.xml
-
 # Media (OMX)
 etc/seccomp_policy/mediacodec.policy
 lib/libdatasource.so
