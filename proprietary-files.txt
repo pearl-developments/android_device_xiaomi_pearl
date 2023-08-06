@@ -1810,8 +1810,6 @@ vendor/etc/nn/ot/neuron_detection.mdla3_0
 vendor/etc/nn/ot/neuron_tracking.mdla3_0
 vendor/etc/nnapi_powerhal.json
 vendor/etc/partition_permission.sh
-vendor/etc/power_app_cfg.xml
-vendor/etc/powercontable.xml
 vendor/etc/public.libraries.txt
 vendor/etc/rsc/CN/ro.prop
 vendor/etc/rsc/CN/rw.prop
@@ -1834,7 +1832,6 @@ vendor/etc/smartpa_param/tfa98xx_ringtone.bin
 vendor/etc/smartpa_param/tfa98xx_voice.bin
 vendor/etc/smsdbvisitor.xml
 vendor/etc/special_pws_channel.xml
-vendor/etc/task_profiles.json
 vendor/etc/throttle.sh
 vendor/etc/vendor-apns-conf.xml
 vendor/etc/vintf/manifest/AHBF@2.1-service.xml
