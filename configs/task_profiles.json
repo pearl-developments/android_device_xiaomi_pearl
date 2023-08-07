@@ -24,32 +24,6 @@
 
   "Profiles": [
     {
-      "Name": "Frozen",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "freezer",
-            "Path": "frozen"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Unfrozen",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "freezer",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
       "Name": "LowIoPriority",
       "Actions": [
         {
