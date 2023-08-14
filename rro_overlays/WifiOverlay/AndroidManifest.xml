@@ -19,7 +19,7 @@
     package="com.android.wifi.resources.mt6895"
     android:versionCode="1"
     android:versionName="1.0">
-    <application android:hasCode="false" />
+    <application android:hasCode="false"  android:allowBackup="false"/>
     <overlay
       android:targetPackage="com.android.wifi.resources"
       android:targetName="WifiCustomization"
