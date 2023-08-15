@@ -221,5 +221,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.device.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml
 
+# Wifi
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/xaga/BoardConfigVendor.mk
