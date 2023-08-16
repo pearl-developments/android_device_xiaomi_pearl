@@ -5,6 +5,14 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq 2550000
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 5500000000
 
+on init
+    # update cpus for cpuset cgroup
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
+
 on charger
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 0
@@ -31,7 +39,7 @@ on boot
     write /dev/cpuctl/background/cpu.uclamp.min 100
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
 
-on property:sys.boot_completed=1
+on enable-low-power
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore boot perf. tune
@@ -50,3 +58,6 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/background/cpu.uclamp.min 0
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+on property:sys.boot_completed=1
+    trigger enable-low-power

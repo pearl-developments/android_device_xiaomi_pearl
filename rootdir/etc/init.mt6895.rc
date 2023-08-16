@@ -3,6 +3,7 @@ import /vendor/etc/init/hw/set_permissive.rc
 # MTK platform .rc configure
 
 import ${ro.vendor.rc}init.connectivity.rc
+import ${ro.vendor.rc}init.mt6895.power.rc
 import ${ro.vendor.rc}init.mt6895.usb.rc
 import /vendor/etc/init/hw/init.project.rc
 import /system_ext/etc/init/hw/init.aee.rc
@@ -10,7 +11,6 @@ import /FWUpgradeInit.rc
 import ${ro.vendor.rc}init.volte.rc
 import ${ro.vendor.rc}init.mal.rc
 import ${ro.vendor.rc}${ro.vendor.init.sensor.rc}
-import ${ro.vendor.rc}init.cgroup.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import ${ro.vendor.rc}init.modem.rc
@@ -52,13 +52,6 @@ on init
 # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
-
-# update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/top-app/cpus 0-7
 
 on late-init
     write /proc/bootprof "INIT:late-init"
@@ -704,10 +697,6 @@ on post-fs-data
 
     chmod 0664 /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
     chown media media /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
-
-    #mtk_sched
-    chmod 0660 /dev/mtk_sched
-    chown system media /dev/mtk_sched
 
     #BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
     chmod 0660 /dev/ebc
