@@ -1807,13 +1807,9 @@ vendor/etc/nnapi_powerhal.json
 vendor/etc/partition_permission.sh
 vendor/etc/public.libraries.txt
 vendor/etc/rsc/CN/ro.prop
-vendor/etc/rsc/CN/rw.prop
 vendor/etc/rsc/GL/ro.prop
-vendor/etc/rsc/GL/rw.prop
 vendor/etc/rsc/IN/ro.prop
-vendor/etc/rsc/IN/rw.prop
 vendor/etc/rsc/default/ro.prop
-vendor/etc/rsc/default/rw.prop
 vendor/etc/screen_light.xml
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
