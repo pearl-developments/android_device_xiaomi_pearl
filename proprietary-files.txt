@@ -55,7 +55,6 @@ vendor/lib64/libladder.so
 
 # Audio configs
 etc/audio_effects.conf
-vendor/etc/default_volume_tables.xml
 
 # Audio effect
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
