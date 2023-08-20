@@ -1,0 +1,14 @@
+# Allow hal_nfc_default to add and find hal_nxpnfc_hwservice
+add_hwservice(hal_nfc_default, hal_nxpnfc_hwservice)
+add_hwservice(hal_nfc_default, hal_nxpese_hwservice)
+allow hal_nfc_default hal_nxpnfc_hwservice:hwservice_manager find;
+allow hal_nfc_default hal_nxpese_hwservice:hwservice_manager find;
+
+# Allow to add hal_nfc_hwservice
+add_hwservice(hal_nfc_default, hal_nfc_hwservice)
+
+# Allow to call secure element HAL
+binder_call(hal_nfc_default, hal_nfc_hwservice)
+
+# Allow to find hal_nfc_hwservice
+allow hal_nfc_default hal_nfc_hwservice:hwservice_manager find;
