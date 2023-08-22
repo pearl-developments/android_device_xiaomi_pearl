@@ -248,17 +248,21 @@ PRODUCT_PACKAGES += \
     Tag
 
 # Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
 
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
     FrameworksResOverlay \
     NotchBarKiller \
     SettingsOverlay \
     SettingsLibOverlay \
     SystemUIOverlay \
     TetheringConfigOverlay \
+    TelephonyOverlay \
+    TelephonyProviderOverlay \
     WifiOverlay \
     XagaProFrameworkResOverlay \
     XagaProInFrameworkResOverlay \
