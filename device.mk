@@ -432,5 +432,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.3.vendor \
     android.hardware.usb.gadget@1.1.vendor
 
+# Xiaomi Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+    
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/xaga/xaga-vendor.mk)

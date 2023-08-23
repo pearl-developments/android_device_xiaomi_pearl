@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Cấu hình Nhiệt</string>
+    <string name="thermal_summary">Điều chỉnh cấu hình nhiệt độ riêng cho từng ứng dụng để đạt hiệu suất tối ưu</string>
+    <string name="thermal_default">Mặc định</string>
+    <string name="thermal_benchmark">Kiểm tra hiệu năng</string>
+    <string name="thermal_browser">Trình duyệt</string>
+    <string name="thermal_camera">Máy ảnh</string>
+    <string name="thermal_dialer">Ứng dụng điện thoại</string>
+    <string name="thermal_gaming">Chơi game</string>
+    <string name="thermal_streaming">Xem phim trực tuyến</string>
+
+    <!-- Refresh Rate Settings -->
+    <string name="refresh_rate_tile_title">Tốc độ làm mới</string>
+
+    <!-- Per-app refresh rate -->
+    <string name="refresh_title">Tốc độ làm mới cho từng ứng dụng</string>
+    <string name="refresh_summary">Đặt tốc độ làm mới tối đa cho một ứng dụng cụ thể</string>
+    <string name="refresh_default">Mặc định</string>
+    <string name="refresh_standard">60Hz</string>    
+    <string name="refresh_extreme">120Hz</string>    
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Làm sạch loa</string>
+    <string name="clear_speaker_summary">Phát một đoạn âm thanh dài 30 giây để làm sạch loa</string>
+    <string name="clear_speaker_description">Chạy tính năng này một hoặc hai lần nếu bạn thấy loa của mình bị bụi bám nhẹ. Đặt âm lượng phương tiện ở mức tối đa.\n\nNếu loa bị chặn nhiều, hãy chạy tính năng này 2-5 lần trong khi lắc thiết bị của bạn với loa hướng xuống dưới.\n\nChú ý: Chắc chắn rằng không có tai nghe nào được kết nối.</string>
+</resources>
