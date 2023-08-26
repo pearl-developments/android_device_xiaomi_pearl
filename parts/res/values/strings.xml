@@ -35,10 +35,10 @@
     <string name="refresh_summary">Set the maximum refresh rate for a specific application</string>
     <string name="refresh_default">Default</string>
     <string name="refresh_low">30Hz</string>
-    <string name="refresh_moderate">50Hz</string>
     <string name="refresh_standard">60Hz</string>
-    <string name="refresh_high">90Hz</string>
+    <string name="refresh_mid">90Hz</string>
     <string name="refresh_extreme">120Hz</string>
+    <string name="refresh_maximum">144Hz</string>
     
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>

@@ -20,8 +20,8 @@ import android.app.ActivityManager;
 import android.app.ActivityTaskManager;
 import android.app.ActivityTaskManager.RootTaskInfo;
 import android.app.IActivityTaskManager;
-import android.app.Service;
 import android.app.TaskStackListener;
+import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -49,48 +49,36 @@ public class RefreshService extends Service {
                     return;
                 }
                 String foregroundApp = info.topActivity.getPackageName();
+                if (!mRefreshUtils.isAppInList) {
+                    mRefreshUtils.getOldRate();
+                }
                 if (!foregroundApp.equals(mPreviousApp)) {
                     mRefreshUtils.setRefreshRate(foregroundApp);
                     mPreviousApp = foregroundApp;
                 }
-            } catch (Exception e) {}
+            } catch (Exception e) {
             }
-        };
-
+        }
+    };
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             mPreviousApp = "";
-            mRefreshUtils.setDefaultRefreshRate(context);
         }
     };
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
-        mRefreshUtils = new RefreshUtils(this);
-        mRefreshUtils.setDefaultRefreshRate(this);
         try {
             mActivityTaskManager = ActivityTaskManager.getService();
             mActivityTaskManager.registerTaskStackListener(mTaskListener);
         } catch (RemoteException e) {
             // Do nothing
         }
+        mRefreshUtils = new RefreshUtils(this);
         registerReceiver();
         super.onCreate();
-    }
-
-    @Override
-    public void onDestroy() {
-        if (DEBUG) Log.d(TAG, "Destroying service");
-        unregisterReceiver();
-        try {
-            ActivityTaskManager.getService().unregisterTaskStackListener(mTaskListener);
-        } catch (RemoteException e) {
-            // Do nothing
-        }
-        mRefreshUtils.setDefaultRefreshRate(this);
-        super.onDestroy();
     }
 
     @Override
@@ -107,10 +95,7 @@ public class RefreshService extends Service {
     private void registerReceiver() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_OFF);
+        filter.addAction(Intent.ACTION_SCREEN_ON);
         this.registerReceiver(mIntentReceiver, filter);
-    }
-
-    private void unregisterReceiver() {
-        this.unregisterReceiver(mIntentReceiver);
     }
 }

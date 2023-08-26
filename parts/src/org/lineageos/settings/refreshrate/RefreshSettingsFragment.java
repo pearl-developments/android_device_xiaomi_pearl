@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2020 The LineageOS Project
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -58,6 +57,8 @@ public class RefreshSettingsFragment extends PreferenceFragment
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSession;
     private ActivityFilter mActivityFilter;
+    private Map<String, ApplicationsState.AppEntry> mEntryMap =
+            new HashMap<String, ApplicationsState.AppEntry>();
 
     private RefreshUtils mRefreshUtils;
     private RecyclerView mAppsRecyclerView;
@@ -82,7 +83,7 @@ public class RefreshSettingsFragment extends PreferenceFragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.refresh_layout, container, false);
     }
 
@@ -99,6 +100,7 @@ public class RefreshSettingsFragment extends PreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        getActivity().setTitle(getResources().getString(R.string.refresh_title));
         rebuild();
     }
 
@@ -180,6 +182,10 @@ public class RefreshSettingsFragment extends PreferenceFragment
         }
 
         mAllPackagesAdapter.setEntries(entries, sections, positions);
+        mEntryMap.clear();
+        for (ApplicationsState.AppEntry e : entries) {
+            mEntryMap.put(e.info.packageName, e);
+        }
     }
 
     private void rebuild() {
@@ -190,14 +196,14 @@ public class RefreshSettingsFragment extends PreferenceFragment
         switch (state) {
             case RefreshUtils.STATE_LOW:
                 return R.drawable.ic_refresh_30;
-            case RefreshUtils.STATE_MODERATE:
-                return R.drawable.ic_refresh_50;
             case RefreshUtils.STATE_STANDARD:
                 return R.drawable.ic_refresh_60;
-            case RefreshUtils.STATE_HIGH:
+            case RefreshUtils.STATE_MID:
                 return R.drawable.ic_refresh_90;
             case RefreshUtils.STATE_EXTREME:
                 return R.drawable.ic_refresh_120;
+            case RefreshUtils.STATE_MAXIMUM:
+                return R.drawable.ic_refresh_144;    
             case RefreshUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_refresh_default;
@@ -229,10 +235,10 @@ public class RefreshSettingsFragment extends PreferenceFragment
         private final int[] items = {
                 R.string.refresh_default,
                 R.string.refresh_low,
-                R.string.refresh_moderate,
                 R.string.refresh_standard,
-                R.string.refresh_high,
-                R.string.refresh_extreme
+                R.string.refresh_mid,
+                R.string.refresh_extreme,
+                R.string.refresh_maximum
         };
 
         private ModeAdapter(Context context) {
@@ -266,6 +272,7 @@ public class RefreshSettingsFragment extends PreferenceFragment
 
             view.setText(items[position]);
             view.setTextSize(14f);
+
             return view;
         }
     }
@@ -301,11 +308,12 @@ public class RefreshSettingsFragment extends PreferenceFragment
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             Context context = holder.itemView.getContext();
+
             ApplicationsState.AppEntry entry = mEntries.get(position);
+
             if (entry == null) {
                 return;
             }
-
             holder.mode.setAdapter(new ModeAdapter(context));
             holder.mode.setOnItemSelectedListener(this);
             holder.title.setText(entry.label);
@@ -316,11 +324,10 @@ public class RefreshSettingsFragment extends PreferenceFragment
             holder.mode.setSelection(packageState, false);
             holder.mode.setTag(entry);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
-            holder.stateIcon.setOnClickListener(v -> holder.mode.performClick());
         }
 
         private void setEntries(List<ApplicationsState.AppEntry> entries,
-                List<String> sections, List<Integer> positions) {
+                                List<String> sections, List<Integer> positions) {
             mEntries = entries;
             mSections = sections.toArray(new String[sections.size()]);
             mPositions = new int[positions.size()];
@@ -334,6 +341,7 @@ public class RefreshSettingsFragment extends PreferenceFragment
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             final ApplicationsState.AppEntry entry = (ApplicationsState.AppEntry) parent.getTag();
+
             int currentState = mRefreshUtils.getStateForPackage(entry.info.packageName);
             if (currentState != position) {
                 mRefreshUtils.writePackage(entry.info.packageName, position);

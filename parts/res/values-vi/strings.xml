@@ -33,8 +33,11 @@
     <string name="refresh_title">Tốc độ làm mới cho từng ứng dụng</string>
     <string name="refresh_summary">Đặt tốc độ làm mới tối đa cho một ứng dụng cụ thể</string>
     <string name="refresh_default">Mặc định</string>
-    <string name="refresh_standard">60Hz</string>    
-    <string name="refresh_extreme">120Hz</string>    
+    <string name="refresh_low">30Hz</string>
+    <string name="refresh_standard">60Hz</string>
+    <string name="refresh_mid">90Hz</string>
+    <string name="refresh_extreme">120Hz</string>
+    <string name="refresh_maximum">144Hz</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Làm sạch loa</string>

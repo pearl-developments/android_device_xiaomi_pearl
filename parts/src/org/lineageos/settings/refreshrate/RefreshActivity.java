@@ -34,6 +34,7 @@ public class RefreshActivity extends CollapsingToolbarBaseActivity {
                 new RefreshSettingsFragment(), TAG_REFRESH).commit();
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -42,5 +43,4 @@ public class RefreshActivity extends CollapsingToolbarBaseActivity {
         }
         return false;
     }
-
 }
