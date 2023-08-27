@@ -18,6 +18,9 @@ genfscon sysfs /sys/devices/platform/mt_charger/power_supply/charger(/.*)?      
 genfscon sysfs /sys/devices/platform/xagapro_charger/power_supply/usb(/.*)?                       u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter(/.*)?                      u:object_r:vendor_sysfs_usbpd_device:s0
 
+# Sensor
+genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor                                   u:object_r:sysfs_palm_sensor:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/10001000.consys/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1c804000.spmi/spmi-0/0-04/wakeup u:object_r:sysfs_wakeup:s0

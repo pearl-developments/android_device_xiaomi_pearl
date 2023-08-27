@@ -1,0 +1,1 @@
+allow mtk_hal_sensors sysfs_palm_sensor:file rw_file_perms;
