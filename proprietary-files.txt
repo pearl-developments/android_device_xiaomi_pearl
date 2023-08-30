@@ -1615,7 +1615,6 @@ vendor/bin/hw/tetheroffloadservice
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/bin/hw/vendor.microtrust.hardware.se@1.0-service
 vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
@@ -1772,7 +1771,6 @@ vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
-vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/init/vendor.microtrust.hardware.se@1.0-service.rc
 vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc
@@ -1993,7 +1991,6 @@ vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib/libnpagent.so
 vendor/lib/libnvram.so
 vendor/lib/libnvram_sec.so
-vendor/lib/libnwk_opt_halwrap_vendor.so
 vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libnxpsmartpaparser.so
 vendor/lib/libperfctl_vendor.so
@@ -2060,7 +2057,6 @@ vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
-vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib/vendor.xiaomi.hardware.cld@1.0.so
@@ -2274,7 +2270,6 @@ vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libnvram.so
 vendor/lib64/libnvram_sec.so
-vendor/lib64/libnwk_opt_halwrap_vendor.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libnxpsmartpaparser.so
 vendor/lib64/libperfctl_vendor.so
@@ -2334,7 +2329,6 @@ vendor/lib64/libwvkeybox.so
 vendor/lib64/libz_stable.so
 vendor/lib64/ls_nq_client-v1.so
 vendor/lib64/meta_wifi_data.so
-vendor/lib64/nwk_opt_imp.so
 vendor/lib64/secure_element-impl.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
@@ -2356,7 +2350,6 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
-vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/vendor.microtrust.hardware.soter@1.0.so
 vendor/lib64/vendor.microtrust.hardware.thh@2.0.so
