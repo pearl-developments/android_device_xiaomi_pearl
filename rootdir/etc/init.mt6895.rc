@@ -1016,6 +1016,11 @@ on property:sys.boot_completed=1
     # stop bootprof
     write /proc/bootprof 0
 
+    # TCP settings
+    write /proc/sys/net/ipv4/tcp_ecn 1
+    write /proc/sys/net/ipv4/tcp_fastopen 3
+    write /proc/sys/net/ipv4/tcp_syncookies 0
+    
 # mount debugfs on user-root
 on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.debuggable="1"
    mount debugfs debugfs /sys/kernel/debug
