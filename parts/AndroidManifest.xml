@@ -129,10 +129,12 @@
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
+                android:value="com.android.settings.category.ia.system" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/refresh_summary" />
+            <meta-data android:name="com.android.settings.icon"
+                       android:resource="@drawable/ic_per_app_rr" />                
         </activity>
 
         <activity
