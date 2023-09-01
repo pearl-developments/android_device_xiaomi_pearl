@@ -1514,7 +1514,7 @@ vendor/lib64/libstagefrightdolby.so
 vendor/lib64/libstagefrighthw.so
 
 # MIUI Camera
-#-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Snap,GoogleCameraGo,Camera2,Aperture
+-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Snap,GoogleCameraGo,Camera2,Aperture,Flash
 #lib64/libcamera_algoup_jni.xiaomi.so
 #lib64/libcamera_client.so
 #lib64/libcamera_ispinterface_jni.xiaomi.so
