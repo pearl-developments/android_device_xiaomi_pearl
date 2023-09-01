@@ -5,8 +5,11 @@
 //
 
 runtime_resource_overlay {
-    name: "TelephonyOverlay",
+    name: "CarrierConfigOverlayXaga",
+    theme: "CarrierConfigOverlayXaga",
+    certificate: "platform",
     sdk_version: "current",
     resource_dirs: ["res"],
-    vendor: true,
+    product_specific: true,
+    aaptflags: ["--keep-raw-values"]
 }

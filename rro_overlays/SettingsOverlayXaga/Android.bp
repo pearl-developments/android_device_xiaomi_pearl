@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsOverlay",
+    name: "SettingsOverlayXaga",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

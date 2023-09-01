@@ -258,19 +258,19 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage \
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    FrameworksResOverlay \
-    NotchBarKiller \
-    SettingsOverlay \
-    SettingsLibOverlay \
-    SystemUIOverlay \
-    TetheringConfigOverlay \
-    TelephonyOverlay \
-    TelephonyProviderOverlay \
-    WifiOverlay \
+    CarrierConfigOverlayXaga \
+    FrameworksResOverlayXaga \
+    NotchBarKillerXaga \
+    SettingsOverlayXaga \
+    SettingsLibOverlayXaga \
+    SystemUIOverlayXaga \
+    TetheringConfigOverlayXaga \
+    TelephonyOverlayXaga \
+    TelephonyProviderOverlayXaga \
+    WifiOverlayXaga \
     XagaProFrameworkResOverlay \
     XagaProInFrameworkResOverlay \
-    SettingsProviderOverlay \
+    SettingsProviderOverlayXaga \
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
