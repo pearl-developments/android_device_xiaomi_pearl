@@ -2792,11 +2792,6 @@ vendor/etc/thermal/thermal_policy_03.conf
 vendor/etc/thermal/thermal_policy_08.conf
 vendor/etc/thermald-devices.conf
 
-# USB
-vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
-vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
-vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
-
 # Vendor Modules
 vendor_dlkm/lib/modules/adsp-v2.ko
 vendor_dlkm/lib/modules/ak7375c.ko
