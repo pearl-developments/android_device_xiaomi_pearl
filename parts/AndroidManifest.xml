@@ -61,18 +61,6 @@
             android:name=".thermal.ThermalService"
             android:permission="ThermalService">
         </service>
-
-        <service
-            android:name=".thermal.ThermalTileService"
-            android:icon="@drawable/ic_thermal_settings"
-            android:label="@string/thermal_title"
-            android:exported="true"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
         
         <service
             android:name=".dirac.DiracTileService"
