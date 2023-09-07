@@ -33,3 +33,6 @@ allow devicesettings_app {
 # ro.input.resampling
 # viewroot.profile_rendering
 dontaudit devicesettings_app default_prop:file read;
+
+# Allow devicesettings_app to get settingsdebug.instant.packages prop
+get_prop(devicesettings_app, settingslib_prop)
