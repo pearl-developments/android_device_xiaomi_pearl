@@ -153,6 +153,7 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.uclamp.min=180
+ro.sf.force_hwc_brightness=1
 ro.vendor.all_modes.colorpick_adjust=true
 ro.vendor.colorpick_adjust=true
 ro.vendor.histogram.enable=false
