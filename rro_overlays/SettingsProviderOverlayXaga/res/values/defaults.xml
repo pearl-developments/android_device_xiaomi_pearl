@@ -40,7 +40,4 @@
     <!-- Enable vibrate for calls by default -->
     <bool name="def_vibrate_when_ringing">true</bool>
 
-    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
-    <string name="def_device_name_simple">Xaga</string>
-
 </resources>

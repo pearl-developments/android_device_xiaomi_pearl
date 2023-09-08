@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.settingsprovider.overlay.xaga.chinaplus">
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="com.android.providers.settings"
+             android:requiredSystemPropertyName="ro.product.vendor.model"
+             android:requiredSystemPropertyValue="22041216UC"
+             android:isStatic="true" />
+</manifest>
