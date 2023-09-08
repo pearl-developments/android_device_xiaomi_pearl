@@ -22,6 +22,7 @@ cc_library_static {
     ],
     recovery_available: true,
     include_dirs: [
-        "system/core/init"
+        "system/libbase/include",
+        "system/core/init",
     ]
 }
