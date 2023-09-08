@@ -129,7 +129,7 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libvulkan
 
-#Debug info
+# Debug info
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
@@ -192,6 +192,11 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
 
+# Hotword Enrollment
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
+    $(LOCAL_PATH)/configs/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml
+    
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
