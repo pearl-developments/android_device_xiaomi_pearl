@@ -65,7 +65,7 @@
         <service
             android:name=".dirac.DiracTileService"
             android:exported="true"
-            android:icon="@drawable/ic_headphone"
+            android:icon="@drawable/ic_dirac_qs"
             android:label="@string/dirac_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
@@ -111,7 +111,7 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/refresh_summary" />
             <meta-data android:name="com.android.settings.icon"
-                       android:resource="@drawable/ic_per_app_rr" />                
+                       android:resource="@drawable/ic_refresh_settings" />                
         </activity>
 
         <service
