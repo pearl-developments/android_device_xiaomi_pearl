@@ -1,6 +1,9 @@
 # Batterysecret
 persist.vendor.accelerate.charge                u:object_r:vendor_batterysecret_prop:s0
 
+# Citsensorservice
+persist.vendor.trigger.cct u:object_r:vendor_citsensorservice_prop:s0
+
 # Fingerprint
 ro.hardware.fp.                 u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                 u:object_r:vendor_fp_prop:s0

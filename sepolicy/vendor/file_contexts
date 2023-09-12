@@ -91,7 +91,7 @@
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?        u:object_r:vendor_sysfs_displayfeature:s0
 
 # Hals
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service u:object_r:hal_citsensorservice_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.sensor\.citsensorservice@1\.1-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.xiaomi_mt6895   u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service    u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/mfp-daemon u:object_r:hal_fingerprint_default_exec:s0
