@@ -3,3 +3,5 @@ get_prop(vendor_init, vts_status_prop)
 set_prop(vendor_init, vendor_batterysecret_prop)
 
 allow vendor_init proc_net:file write;
+
+rw_dir_file(vendor_init, sysfs_leds)
