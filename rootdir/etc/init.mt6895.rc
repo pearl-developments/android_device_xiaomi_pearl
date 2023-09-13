@@ -68,6 +68,7 @@ on late-init
 # mount different fs start
 
 on charger
+    start set_permissive_chg
     chmod 0660 /dev/spm
     chown system system /dev/spm
     chmod 0666 /dev/kmsg
@@ -1151,3 +1152,12 @@ on property:sys.boot_completed=1
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
+
+# Set permissive on offline charging mode
+service set_permissive_chg /vendor/bin/set_permissive.sh
+    class main
+    user root
+	seclabel u:r:su:s0
+    disabled
+    oneshot
+    
