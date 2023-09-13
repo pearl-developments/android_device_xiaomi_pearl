@@ -1,10 +1,3 @@
-# Bluetooth
-bluetooth.profile.bap.unicast.client.enabled=true
-bluetooth.profile.ccp.server.enabled=true
-bluetooth.profile.csip.set_coordinator.enabled=true
-bluetooth.profile.mcp.server.enabled=true
-bluetooth.profile.vcp.controller.enabled=true
-
 # Dex2oat
 dalvik.vm.background-dex2oat-cpu-set=0,1,2,3
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
