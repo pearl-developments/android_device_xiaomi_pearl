@@ -85,7 +85,12 @@
 
 # Fingerprint
 /sys/devices/platform/fingerprint(/.*)? u:object_r:vendor_sysfs_fp:s0
-/data/vendor/fpdump(/.*)?               u:object_r:vendor_fingerprint_data_file_fpdump:s0
+/mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/fpc(/.*)?    u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?        u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?        u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpc(/.*)?           u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/gf_data(/.*)?       u:object_r:vendor_fingerprint_data_file:s0
 
 # Graphics
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?        u:object_r:vendor_sysfs_displayfeature:s0
