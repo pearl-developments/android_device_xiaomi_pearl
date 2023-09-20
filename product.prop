@@ -1,9 +1,3 @@
-# Dex2oat
-dalvik.vm.background-dex2oat-cpu-set=0,1,2,3
-dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
-dalvik.vm.dex2oat-threads=4
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3
-
 # Log
 persist.sys.mdlog_dumpback=2
 persist.vendor.mdlog.max_dump_file_count=10,*.muxz,*.bin
