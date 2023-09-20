@@ -141,7 +141,6 @@ ro.sf.force_hwc_brightness=1
 ro.vendor.all_modes.colorpick_adjust=true
 ro.vendor.colorpick_adjust=true
 ro.vendor.histogram.enable=false
-ro.vendor.jpeg_decode_sw_opt=2
 ro.vendor.whitepoint_calibration_enable=false
 ro.vendor.perf.scroll_opt=true
 
@@ -216,7 +215,14 @@ ro.lmk.thrashing_limit_decay=50
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
+debug.mediatek.disp_decompress=1
+debug.stagefright.c2inputsurface=-1
+media.c2.dmabuf.padding=3072
+ro.vendor.jpeg_decode_sw_opt=2
+ro.vendor.mtk_config_max_dram_size=0x800000000
+ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
+vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Netflix
 ro.netflix.bsp_rev=MTK6895-35027-1
@@ -284,11 +290,9 @@ ro.vendor.wlan.standalone.log=y
 # Misc
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 debug.mediatek.appgamepq_compress=1
-debug.mediatek.disp_decompress=1
 debug.mtk_tflite.target_nnapi=29
 graphics.gpu.profiler.support=true
 init.userspace_reboot.is_supported=true
-media.c2.dmabuf.padding=3072
 persist.log.tag.C2K_AT=I
 persist.log.tag.C2K_ATConfig=I
 persist.log.tag.C2K_RILC=I
@@ -380,7 +384,6 @@ ro.vendor.mtk_blulight_def_support=1
 ro.vendor.mtk_c2k_lte_mode=2
 ro.vendor.mtk_c2k_support=1
 ro.vendor.mtk_cam_security_support=1
-ro.vendor.mtk_config_max_dram_size=
 ro.vendor.mtk_cuva_hdr_support=1
 ro.vendor.mtk_data_config=1
 ro.vendor.mtk_dre30_support=1
@@ -405,10 +408,8 @@ ro.vendor.mtk_pq_support=2
 ro.vendor.mtk_prefer_64bit_proc=0
 ro.vendor.mtk_protocol1_rat_config=N/C/Lf/Lt/W/G
 ro.vendor.mtk_ps1_rat=N/C/Lf/Lt/W/G
-ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_slow_motion_support=1
 ro.vendor.mtk_thermal_2_0=1
-ro.vendor.mtk_video_hevc_enc_support=1
 ro.vendor.net.enable_passpoint_r1=1
 ro.vendor.net.enable_sla=1
 ro.vendor.num_md_protocol=2
@@ -476,7 +477,6 @@ vendor.debug.sf.cpupolicy.upbound_uclamp_ret_sys=160
 vendor.debug.sf.cpupolicy.xgf_min=25
 vendor.displayfeature.entry.enable=true
 vendor.hbm.enable=true
-vendor.mtk.vdec.waitkeyframeforplay=9
 vendor.performance.frs.temp_src=/sys/class/thermal/thermal_message/board_sensor_temp
 
 # Zygote
