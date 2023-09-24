@@ -1588,7 +1588,6 @@ vendor/bin/bt_dump
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/charge_logger
 vendor/bin/chipinfo
 vendor/bin/conninfra_loader
 vendor/bin/dc_cal

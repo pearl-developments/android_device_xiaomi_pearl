@@ -1,6 +1,5 @@
 import /vendor/etc/init/hw/init.mtkgki.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
-import /vendor/etc/init/hw/init.charge_logger.rc
 
 # MTK project .rc configure
 
