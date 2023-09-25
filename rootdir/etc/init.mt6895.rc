@@ -952,6 +952,9 @@ on boot
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
 
+# Default country code
+    setprop ro.boot.wificountrycode 00
+
 #Define device for ATCID
     chmod 660 /dev/ttyGS0
     chown system radio /dev/ttyGS0
