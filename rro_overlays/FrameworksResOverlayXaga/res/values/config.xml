@@ -582,7 +582,8 @@
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.ActiveReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.Receiver</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>        
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.chimera.GmsIntentOperationService$GmsExternalReceiver</item>      
     </string-array>    
 
     <!-- List supported color modes. -->
