@@ -224,6 +224,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
+# Linker
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default

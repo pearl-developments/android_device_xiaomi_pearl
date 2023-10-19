@@ -1,0 +1,8 @@
+libOpenCL.so
+libnir_neon_driver_ndk.mtk.vndk.so
+libcmdl_ndk.mtk.vndk.so
+libarmnn_ndk.mtk.vndk.so
+libarcsoft_dualcam_refocus_video.so 64
+libarcsoft_dualcam_refocus_image.so 64
+libmpbase.so
+libneuron_adapter_mgvi.so
