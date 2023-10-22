@@ -1116,7 +1116,7 @@ on boot
 on boot
     insmod /vendor/lib/modules/msync2_frd.ko
 
-service charger /system/bin/charger
+service vendor.charger /system/bin/charger
     class charger
     user system
     group system graphics wakelock input
