@@ -44,6 +44,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="missi_phone_cn-user 13 TP1A.220624.014 V14.0.5.0.TLOCNXM release-keys"
+    PRIVATE_BUILD_DESC="xaga-user 12 SP1A.210812.016 V14.0.6.0.TLOMIXM release-keys"
 
-BUILD_FINGERPRINT := Xiaomi/missi_phone_cn/missi:13/TP1A.220624.014/V14.0.5.0.TLOCNXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/xaga/xaga:12/SP1A.210812.016/V14.0.6.0.TLOMIXM:user/release-keys
