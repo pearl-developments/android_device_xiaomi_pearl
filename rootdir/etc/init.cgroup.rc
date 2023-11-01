@@ -13,9 +13,9 @@ on charger
 
 
 on post-fs-data
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor sugov_ext
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor sugov_ext
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor sugov_ext
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor schedutil
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
 on boot
