@@ -128,8 +128,7 @@
 
 # Sensors
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.xaga-multihal u:object_r:mtk_hal_sensors_exec:s0
-/dev/elliptic0    u:object_r:sensors_device:s0
-/dev/elliptic1    u:object_r:sensors_device:s0
+/dev/elliptic[0-1] u:object_r:sensor_device:s0
 
 # Set permissive
 /vendor/bin/set_permissive.sh                     u:object_r:set_permissive_exec:s0
