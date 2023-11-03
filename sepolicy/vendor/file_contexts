@@ -127,6 +127,7 @@
 /dev/0:0:0:49476  u:object_r:teei_rpmb_device:s0
 
 # Sensors
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.xaga-multihal u:object_r:mtk_hal_sensors_exec:s0
 /dev/elliptic0    u:object_r:sensors_device:s0
 /dev/elliptic1    u:object_r:sensors_device:s0
 
