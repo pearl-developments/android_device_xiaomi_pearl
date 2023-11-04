@@ -1675,7 +1675,6 @@ vendor/etc/MNL_Config.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/etc/apdb/APDB_MT6895___W2230
 vendor/etc/apdb/APDB_MT6895___W2230_ENUM
-vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
 vendor/etc/cit_param_config.json
 vendor/etc/cust_color.xml
