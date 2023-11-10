@@ -290,23 +290,17 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage \
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayXaga \
-    FrameworksResOverlayXaga \
-    NotchBarKillerXaga \
-    SettingsOverlayXaga \
-    SettingsLibOverlayXaga \
-    SystemUIOverlayXaga \
-    TetheringConfigOverlayXaga \
-    TelephonyOverlayXaga \
-    TelephonyProviderOverlayXaga \
-    WifiOverlayXaga \
-    XagaProFrameworkResOverlay \
-    XagaProInFrameworkResOverlay \
-    SettingsProviderOverlayXaga \
-    SettingsProviderOverlayChina \
-    SettingsProviderOverlayChinaPlus \
-    SettingsProviderOverlayGlobal \
-    SettingsProviderOverlayIndia \
+    CarrierConfigOverlayPearl \
+    FrameworksResOverlayPearl \
+    NotchBarKillerPearl \
+    SettingsOverlayPearl \
+    SettingsLibOverlayPearl \
+    SystemUIOverlayPearl \
+    TetheringConfigOverlayPearl \
+    TelephonyOverlayPearl \
+    TelephonyProviderOverlayPearl \
+    WifiOverlayPearl \
+    SettingsProviderOverlayPearl
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -494,4 +488,4 @@ PRODUCT_PACKAGES += \
     XiaomiParts
     
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/xaga/xaga-vendor.mk)
+$(call inherit-product, vendor/xiaomi/pearl/pearl-vendor.mk)

@@ -1,24 +1,23 @@
-Copyright (C) 2022 LineageOS
-# Android device tree for Redmi Note 11T Pro (xaga), Redmi 11T Note Pro+, Redmi K50i(xagain) / K50i Pro and POCO X4 GT / X4 GT PRO.
+Copyright (C) 2023 LineageOS
+# Device tree for Redmi Note 12T Pro (pearl)
+The Redmi Note 12T Pro (codenamed _"pearl"_) is a high-end, mid-range smartphone from Xiaomi.
 
-The Redmi Note 11T Pro (codenamed _"xaga"_) is a high-end, mid-range smartphone from Xiaomi.
-
-It was announced on May 2022. Release date was May 2022.
+It was announced on 2023, May 29. Release date was 2023, June 01.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Octa-core CPU with 4x Arm Cortex-A78 up to 2.85GHz
-Chipset | Mediatek Dimensity 8100
+CPU     | Octa-core (1x3.1 GHz Cortex-A78 & 3x3.0 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55)
+Chipset | Mediatek Dimensity 8200 Ultra (4 nm)
 GPU     | Mali-G610 MC6
-Memory  | 6/8 GB RAM (LPDDR5 6400Mbps)
-Shipped Android Version | 12 with MIUI 13
-Storage | 128/256 (UFS 3.1)
+Memory  | 8/12 GB RAM
+Shipped Android Version | Android 13, MIUI 14
+Storage | 128/256/512 (UFS 3.1)
 Battery | Non-removable Li-Po 5080 mAh battery
-Display | 1080 x 2460 pixels, 6.6 inches, 30/48/50/60/90/120/144 hz, IPS LCD
+Display | 1080 x 2460 pixels, 6.6 inches, Dobly Vision, IPS LCD
 
 ## Device picture
-![Redmi Note 11T Pro](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1653384568.5698588.png)
+![Redmi Note 12T Pro](https://cdn.dxomark.com/wp-content/uploads/medias/post-143658/Xiaomi-Redmi-Note-12-Pro-5G_featured-image-packshot-review-Recovered.jpg)
 
 Tree based on work of @wbs306 - all credits belong to him.

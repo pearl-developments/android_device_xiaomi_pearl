@@ -6,8 +6,31 @@ on post-fs
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
+on boot
+    write /sys/devices/platform/soc/11201000.usb0/mode 3
+    setprop sys.usb.controller "11201000.usb0"
+
 service spm_script /vendor/bin/spm_loader
     user system
     group system
     oneshot
 #INTERNAL_END
+
+on property:ro.boot.usbconfig=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/UDC "none"
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ""
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "acm"
+    write /config/usb_gadget/g1/idProduct 0x2007
+    write /config/usb_gadget/g1/bDeviceClass 02
+    symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+on property:ro.boot.usbconfig=2 && property:sys.usb.configfs=1
+    setprop vendor.usb.acm_idx 1,4
+    write /config/usb_gadget/g1/UDC "none"
+    write /config/usb_gadget/g1/strings/0x409/serialnumber $ro.serialno
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "meta_elt"
+    write /config/usb_gadget/g1/idProduct 0x202d
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs3 /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${sys.usb.controller}

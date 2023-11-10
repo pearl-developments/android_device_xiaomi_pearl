@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/xaga
+DEVICE_PATH := device/xiaomi/pearl
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -48,24 +48,17 @@ TARGET_USES_64_BIT_BINDER := true
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := xaga,xagapro,xagain,xagaproin
-
 # Audio
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := xaga
+TARGET_BOOTLOADER_BOARD_NAME := pearl
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xaga
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xaga
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -98,14 +91,14 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-TARGET_KERNEL_CONFIG := mikrn_xaga_stability_defconfig
+TARGET_KERNEL_CONFIG := mikrn_pearl_defconfig
 
 # Kernel modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/modules.load)) 
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/xaga
+TARGET_KERNEL_SOURCE := kernel/xiaomi/pearl
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
@@ -228,4 +221,4 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit from the proprietary version
--include vendor/xiaomi/xaga/BoardConfigVendor.mk
+-include vendor/xiaomi/pearl/BoardConfigVendor.mk

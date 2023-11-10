@@ -1,0 +1,15 @@
+//
+// Copyright (C) 2023 The Android Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "CarrierConfigOverlayPearl",
+    theme: "CarrierConfigOverlayPearl",
+    certificate: "platform",
+    sdk_version: "current",
+    resource_dirs: ["res"],
+    product_specific: true,
+    aaptflags: ["--keep-raw-values"]
+}

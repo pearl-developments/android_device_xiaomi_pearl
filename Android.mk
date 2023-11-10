@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),xaga)
+ifeq ($(TARGET_DEVICE),pearl)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
@@ -25,19 +25,12 @@ $(MDOTA_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MDOTA_SYMLINK)
 
-XAGA_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/xaga.txt)))
-$(XAGA_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+PEARL_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/peral.txt)))
+$(PEARL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)
 	$(hide) ln -sf mt6895/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(XAGA_SYMLINK)
-
-MT6895_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/mt6895.txt)))
-$(MT6895_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf mt6895/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(MT6895_SYMLINK)
+ALL_DEFAULT_INSTALLED_MODULES += $(PEARL_SYMLINK)
 
 AUDIO_PRIMARY_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/audio.primary.mt6895.so
 AUDIO_PRIMARY_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/audio.primary.mt6895.so

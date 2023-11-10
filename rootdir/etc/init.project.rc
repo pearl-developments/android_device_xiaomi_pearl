@@ -1,6 +1,6 @@
 import /vendor/etc/init/hw/init.mtkgki.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
-
+import /vendor/etc/init/hw/init.charge_logger.rc
 # MTK project .rc configure
 
 #mi thermald init
@@ -70,21 +70,15 @@ on post-fs-data
     chmod 0660 /dev/p73
     chown nfc nfc /dev/p73
 
-#calibration
-    mkdir mnt/vendor/persist/
-    mkdir mnt/vendor/persist/camera
-    chown system cameraserver mnt/vendor/persist
-    chown system cameraserver mnt/vendor/persist/camera
-    chmod 777 mnt/vendor/persist/camera
-    chmod 777 mnt/vendor/persist
-    chmod 777 mnt/vendor/persist/camera/com.xiaomi.dcal.wu.bin
-    chmod 777 vendor/etc/camera/cal_w_uw_L16_golden_64m_i
-    chmod 777 vendor/etc/camera/cal_w_uw_L16_golden_64m_ii
-    chmod 777 vendor/etc/camera/cal_w_uw_L16_golden_108m
-    mkdir /data/vendor/camera
-    chown root system /data/vendor/camera
-    chmod 0777 /data/vendor/camera
-    chmod 777 data/vendor/camera/com.xiaomi.dcal.wu.data
+#ufscld function permission
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/auto_hibern8_enable
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/block_suspend
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/cld_opration_status
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/debug
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/frag_level
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/trigger
+    chown root system /sys/devices/platform/112b0000.ufshci/ufscld/trigger_interval
+    chmod 664 /sys/devices/platform/112b0000.ufshci/ufscld/trigger
 
 on init
     # Refer to http://source.android.com/devices/tech/storage/index.html
@@ -100,14 +94,47 @@ service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/
     class late_start
     disabled
 
-# start mmstat
-on property:sys.boot_completed=1
-    mkdir /sys/kernel/tracing/instances/mmstat 711
-    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
-    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
-    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
-    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
-    write /proc/sys/vm/watermark_scale_factor 1
+service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
+       class main
+       user root
+       group root wifi
+       disabled
+       oneshot
+
+service vendor_sniffer /vendor/bin/tcpdump-vendor -i wlan0 -w /data/vendor/wlan_logs/sniffer.pcap
+    class main
+    user root
+    group root wifi
+    disabled
+    oneshot
+
+service vendor_sniffer_circular /vendor/bin/tcpdump-vendor -i wlan0 -W 3 -C 300 -w /data/vendor/wlan_logs/sniffer.pcap
+    class main
+    user root
+    group root wifi
+    disabled
+    oneshot
+
+on property:vendor.hardware.wlan.runsniffer=stop
+    stop vendor_sniffer
+
+on property:vendor.hardware.wlan.runsniffer=start
+    start vendor_sniffer
+
+on property:vendor.hardware.wlan.runtcpdump=stop
+    stop vendor_tcpdump
+
+on property:vendor.hardware.wlan.runtcpdump=start
+    start vendor_tcpdump
+
+on property:sys.user.0.ce_available=true
+    start vendor_tcpdump
+
+on property:vendor.hardware.wlan.runsniffer.circular=stop
+     stop vendor_sniffer_circular
+
+on property:vendor.hardware.wlan.runsniffer.circular=start
+     start vendor_sniffer_circular
 
 # displayfeature
 on boot
@@ -129,26 +156,18 @@ on boot
     chown system system /sys/class/mi_display/disp-DSI-0/brightness_clone
     chmod 0664 /sys/class/mi_display/disp-DSI-0/brightness_clone
     #camera flash led
-    chown system /sys/class/flashlight_core/flashlight/torchbrightness
-    chmod 0666 /sys/class/flashlight_core/flashlight/torchbrightness
+    chown system system /sys/class/flashlight_core/flashlight/torchbrightness
+    chmod 0664 /sys/class/flashlight_core/flashlight/torchbrightness
+    # game plaid mode
+    chown system system  /sys/devices/virtual/gpu_plaid/plaid/game_data
 
-service taskset_sh /vendor/bin/init.taskset.sh
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on early-init
-    start taskset_sh
-
-service ram_sh /vendor/bin/init.ram.sh
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
+# start mmstat
 on property:sys.boot_completed=1
-    start ram_sh
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
 
+    write /proc/sys/vm/extra_free_kbytes 30375
+    write /proc/sys/vm/watermark_scale_factor 1

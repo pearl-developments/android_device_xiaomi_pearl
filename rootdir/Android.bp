@@ -31,6 +31,13 @@ sh_binary {
 
 // Init configuration files
 prebuilt_etc {
+    name: "init.aee.rc",
+    src: "etc/init.aee.rc",
+    subdir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.batterysecret.rc",
     src: "etc/init.batterysecret.rc",
     sub_dir: "init/hw",

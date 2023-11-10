@@ -8,9 +8,11 @@ import ${ro.vendor.rc}init.mt6895.usb.rc
 import /vendor/etc/init/hw/init.project.rc
 import /system_ext/etc/init/hw/init.aee.rc
 import /FWUpgradeInit.rc
+import /vendor/etc/init/hw/init.aee.rc
 import ${ro.vendor.rc}init.volte.rc
 import ${ro.vendor.rc}init.mal.rc
 import ${ro.vendor.rc}${ro.vendor.init.sensor.rc}
+import ${ro.vendor.rc}init.cgroup.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import ${ro.vendor.rc}init.modem.rc
@@ -44,6 +46,7 @@ on init
     # setprop ro.vold.primary_physical 1
 
     mkdir /mnt/cd-rom 0000 system system
+    symlink /dev/block /dev/block/bootdevice
 
 # change lk_env permission
     chown root system /proc/lk_env
@@ -52,6 +55,13 @@ on init
 # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
+
+# update cpus for cpuset cgroup
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
 
 on late-init
     write /proc/bootprof "INIT:late-init"
@@ -64,6 +74,7 @@ on charger
     start set_permissive_chg
     chmod 0660 /dev/spm
     chown system system /dev/spm
+    start spm_script
     chmod 0666 /dev/kmsg
     chmod 0775 /mnt/vendor
     mkdir /mnt/vendor/nvcfg
@@ -85,12 +96,16 @@ on charger
     chmod 0660 /sys/power/wakeup_count
     write /sys/power/pm_freeze_timeout 2000
 
-    # Turn backlight on and switch to backlight trigger
-    write /sys/class/leds/lcd-backlight/brightness "1000"
-    write /sys/class/leds/lcd-backlight/trigger "backlight"
-    
     #start fuelgauged
     #start fuelgauged_nvram
+
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
+    chmod 0644 /sys/class/leds/lcd-backlight/max_brightness
+    chown system system /sys/class/leds/lcd-backlight/max_brightness
+    chmod 0644 /sys/class/leds/lcd-backlight/min_brightness
+    chown system system /sys/class/leds/lcd-backlight/min_brightness
 
     # Stop bootprof
     write /proc/bootprof "0"
@@ -191,6 +206,20 @@ on post-fs-data
     write /sys/block/zram0/comp_algorithm lz4
     swapon_all /vendor/etc/fstab.mt6895
 
+    # boot time fs tune
+    write /sys/block/mmcblk0/queue/iostats 0
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/nr_requests 256
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/dm-2/queue/read_ahead_kb 2048
+    write /sys/block/dm-3/queue/read_ahead_kb 2048
+    write /sys/block/dm-4/queue/read_ahead_kb 2048
+    write /sys/block/dm-5/queue/read_ahead_kb 2048
+
     chown system system /mnt/vendor/nvcfg
     chmod 0771 /mnt/vendor/nvcfg
     restorecon_recursive /mnt/vendor/nvcfg
@@ -238,9 +267,13 @@ on post-fs-data
     chown root system /data/vendor/camera
     chmod 0771 /data/vendor/camera
 
+    mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
+    chmod 0666 /dev/camlog
+
     chmod 755 /mnt/vendor/nvcfg/sensor
     chmod +r /mnt/vendor/nvcfg/sensor/gyro_cali.json
     chmod +r /mnt/vendor/nvcfg/sensor/gyro_bias.json
+    chmod +r /mnt/vendor/nvcfg/sensor/ois_temp_cali.json
     #XIAOMI: Create camera directory for calibration file --end
 
     #Create Camera Dip Debug Folder
@@ -271,6 +304,20 @@ on post-fs-data
 # GPS
     chmod 0775 /vendor/xbin/MPED
     chmod 0666 /dev/gps_emi
+# smart pa start
+    mkdir /mnt/vendor/persist/factory/ 0755 system system
+    mkdir /mnt/vendor/persist/factory/audio 0755 system system
+    mkdir /data/vendor/cit/ 0755 system system
+    chown system system /sys/class/smartpa/re25_calib
+    chmod 0666 /sys/class/smartpa/re25_calib
+    chmod 666 /mnt/vendor/persist/factory/audio/aw_cali.bin
+    mkdir /mnt/vendor/persist/audio 0755 system system
+# smart pa end
+
+    # Audio add for BigData Start
+    chown system audio /dev/xlog
+    chmod 0666 /dev/xlog
+    # Audio add for BigData End
 
 # -----------------------
 # Add by MTK
@@ -338,7 +385,7 @@ on post-fs-data
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log_to_fs
 
     chmod 0666 /dev/pmem_multimedia
-    
+
     # set ptmx group to non-root
     chown root radio /dev/ptmx
 
@@ -358,11 +405,11 @@ on post-fs-data
     setrlimit 8 -1 -1
 
     # CMDQ
-    chmod 0644 /dev/mtk_mdp
+    chmod 0640 /dev/mtk_mdp
     chown system system /dev/mtk_mdp
 
     # MDP SYNC
-    chmod 0644 /dev/mdp_sync
+    chmod 0640 /dev/mdp_sync
     chown system system /dev/mdp_sync
 
     # MML PQ
@@ -402,9 +449,9 @@ on post-fs-data
     chmod 0660 /dev/vcu
     chown media system /dev/vcu
     chmod 0660 /dev/video0
-    chown mediacodec system /dev/video0
+    chown media system /dev/video0
     chmod 0660 /dev/video1
-    chown mediacodec system /dev/video1
+    chown media system /dev/video1
     mkdir /data/vendor/vcodec 0777 media system
     mkdir /data/vendor/vcodec/log 0770 media system
     mkdir /data/vendor/vcodec/in 0770 media system
@@ -692,6 +739,10 @@ on post-fs-data
     chmod 0664 /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
     chown media media /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
 
+    #mtk_sched
+    chmod 0660 /dev/mtk_sched
+    chown system media /dev/mtk_sched
+
     #BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
     chmod 0660 /dev/ebc
     chown media media /dev/ebc
@@ -935,9 +986,6 @@ on boot
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
 
-# Default country code
-    setprop ro.boot.wificountrycode 00
-
 #Define device for ATCID
     chmod 660 /dev/ttyGS0
     chown system radio /dev/ttyGS0
@@ -972,6 +1020,26 @@ on property:vold.decrypt=trigger_shutdown_framework
 on property:vendor.audio.cit.spkcal.copy=true
     copy /data/vendor/cit/tfa9894_chk.txt /mnt/vendor/persist/audio/tfa9894_chk.txt
     chmod 666 /mnt/vendor/persist/audio/tfa9894_chk.txt
+#add M9 aw_pa
+    chmod 644 /data/vendor/cit/aw_cali.bin
+    copy /data/vendor/cit/aw_cali.bin /mnt/vendor/persist/factory/audio/aw_cali.bin
+    chmod 666 /mnt/vendor/persist/factory/audio/aw_cali.bin
+    chmod 666 /data/vendor/cit/aw_cali.bin
+
+# end boot time fs tune
+on property:sys.boot_completed=1
+    write /sys/block/mmcblk0/queue/iostats 1
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+    write /sys/block/mmcblk0/queue/nr_requests 128
+    write /sys/block/sdc/queue/iostats 1
+    write /sys/block/sdc/queue/read_ahead_kb 512
+    write /sys/block/sdc/queue/nr_requests 128
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/dm-3/queue/read_ahead_kb 128
+    write /sys/block/dm-4/queue/read_ahead_kb 128
+    write /sys/block/dm-5/queue/read_ahead_kb 128
 
     # stop bootprof
     write /proc/bootprof 0
@@ -1110,4 +1178,12 @@ service set_permissive_chg /vendor/bin/set_permissive.sh
 	seclabel u:r:su:s0
     disabled
     oneshot
-    
+
+# VSIM service (vendor OSI)
+service osi /system/bin/osi
+    class main
+    user root
+    disabled
+    oneshot
+    #seclabel u:r:osi:s0
+
