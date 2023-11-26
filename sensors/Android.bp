@@ -14,7 +14,7 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.sensors@2.1-service.xaga-multihal",
+    name: "android.hardware.sensors@2.1-service.pearl-multihal",
     defaults: [
         "hidl_defaults",
     ],
@@ -26,8 +26,8 @@ cc_binary {
         "HalProxy.cpp",
         "HalProxyCallback.cpp",
     ],
-    init_rc: ["android.hardware.sensors@2.1-service.xaga-multihal.rc"],
-    vintf_fragments: ["android.hardware.sensors@2.1-xaga-multihal.xml"],
+    init_rc: ["android.hardware.sensors@2.1-service.pearl-multihal.rc"],
+    vintf_fragments: ["android.hardware.sensors@2.1-pearl-multihal.xml"],
     header_libs: [
         "android.hardware.sensors@2.X-shared-utils",
     ],

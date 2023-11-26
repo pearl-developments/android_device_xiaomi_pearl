@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settingsprovider.overlay.xaga">
+    package="com.android.settingsprovider.overlay.pearl">
     <application android:hasCode="false"  android:allowBackup="false"/>
     <overlay
       android:targetPackage="com.android.providers.settings"

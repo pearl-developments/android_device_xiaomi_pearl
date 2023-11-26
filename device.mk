@@ -429,7 +429,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1.vendor \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.1-service.xaga-multihal
+    android.hardware.sensors@2.1-service.pearl-multihal
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31

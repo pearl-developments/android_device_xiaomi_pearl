@@ -75,7 +75,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # MiuiCamera
 ro.miui.notch=1
-ro.product.mod_device=xaga_global
+ro.product.mod_device=pearl
 camera.lab.options=true
 
 # USB
