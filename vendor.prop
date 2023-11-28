@@ -108,10 +108,6 @@ vendor.connsys.driver.ready=no
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
-ro.hardware.gatekeeper=beanpod
-ro.hardware.kmsetkey=beanpod
-ro.hardware.wechat=beanpod
-ro.vendor.mtk_microtrust_tee_support=1
 ro.vendor.mtk_tee_gp_support=1
 
 # DRM
@@ -199,6 +195,9 @@ persist.vendor.viwifi_support=1
 persist.vendor.volte_support=1
 persist.vendor.vonr_setting_support=1
 ro.vendor.md_auto_setup_ims=1
+
+# GateKeeper
+ro.hardware.gatekeeper=mitee
 
 # LMK
 ro.lmk.kill_timeout_ms=100
