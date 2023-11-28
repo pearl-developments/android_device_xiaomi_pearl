@@ -1119,9 +1119,9 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
 # DRM (L1) - from xaga MIUI V14.0.4.0.TLOEUXM
-vendor/lib/liboemcrypto.so
-vendor/lib64/liboemcrypto.so
-vendor/lib64/libwvkeybox.so
+vendor/lib/liboemcrypto.so|42266adeb68000c6ce2e95c9cdeb591215d8700f
+vendor/lib64/liboemcrypto.so|e15e148d2b8c3c88eb4ca2af9f916294339791c7
+vendor/lib64/libwvkeybox.so|cc689c299722ec362a443eee6ccb6d98b9ab8622
 
 # Display (Calibration)
 vendor/etc/cust_color.xml
@@ -1734,9 +1734,9 @@ vendor/lib/libfgauge_gm30.so
 vendor/lib64/libfgauge_gm30.so
 
 # Hotword Enrollment - from xaga MIUI V14.0.4.0.TLOEUXM
--my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar
--my_product/priv-app/HotwordEnrollmentOKGoogleRISCV.apk:product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
--my_product/priv-app/HotwordEnrollmentXGoogleRISCV.apk:product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk
+-my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
+-my_product/priv-app/HotwordEnrollmentOKGoogleRISCV.apk:product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk|94d358806f820a919a0d0db394b659b5fe2954c2
+-my_product/priv-app/HotwordEnrollmentXGoogleRISCV.apk:product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk|6cc7fafd2a0481caf9512224c8572514ff336823
 
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
