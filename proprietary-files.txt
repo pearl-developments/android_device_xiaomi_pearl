@@ -13,6 +13,7 @@ vendor/etc/init/audiocmdservice_atci.rc
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libaudio_param_parser-vnd.so
+vendor/lib/libaudioclient_aidl_conversion.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
 vendor/lib/libaudiocomponentengine_vendor.so
@@ -20,6 +21,7 @@ vendor/lib/libaudiocomponentenginec.so
 vendor/lib/libaudiocustparam_vendor.so
 vendor/lib/libaudiodcrflt_vendor.so
 vendor/lib/libaudiofmtconv.so
+vendor/lib/libaudiofoundation.so
 vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiosmartpamtk.so
@@ -32,12 +34,15 @@ vendor/lib/libdynamiclog.so
 vendor/lib/libfvaudio.so
 vendor/lib/libladder.so
 vendor/lib/libmiresample.so
+vendor/lib/libmispowerop.so
 vendor/lib/libmnetlink_v104.so
 vendor/lib/libmtkares.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkshifter_vendor.so
 vendor/lib/libmtkspparser.so
 vendor/lib/librt_extamp_intf.so
+vendor/lib/libshmemcompat.so
+vendor/lib/libshmemutil.so
 vendor/lib/libvoiprec.so
 vendor/lib/libvow_ap_test_aa.so
 vendor/lib/libvow_ap_test_dd.so
@@ -67,12 +72,15 @@ vendor/lib64/libdynamiclog.so
 vendor/lib64/libfvaudio.so
 vendor/lib64/libladder.so
 vendor/lib64/libmiresample.so
+vendor/lib64/libmispowerop.so
 vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmtkares.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
 vendor/lib64/librt_extamp_intf.so
+vendor/lib64/libshmemcompat.so
+vendor/lib64/libshmemutil.so
 vendor/lib64/libvoiprec.so
 vendor/lib64/libvow_ap_test_aa.so
 vendor/lib64/libvow_ap_test_dd.so
@@ -80,14 +88,6 @@ vendor/lib64/libvow_ap_test_ha.so
 vendor/lib64/libvow_ap_test_hh.so
 vendor/lib64/libvow_ap_test_nn.so
 vendor/lib64/shared-file-region-aidl-cpp.so
-vendor/lib/libmispowerop.so
-vendor/lib64/libmispowerop.so
-vendor/lib/libaudioclient_aidl_conversion.so
-vendor/lib/libaudiofoundation.so
-vendor/lib/libshmemcompat.so
-vendor/lib/libshmemutil.so
-vendor/lib64/libshmemcompat.so
-vendor/lib64/libshmemutil.so
 
 # Audio (Hardware)
 vendor/bin/hw/android.hardware.audio.service.mediatek
@@ -785,6 +785,7 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
+vendor/lib64/libmemunreachable.so
 vendor/lib64/libmiStereoFactoryRemapBasicLib.so
 vendor/lib64/libmiStereoFactoryRemapLib.so
 vendor/lib64/libmiai_deblur.so
@@ -829,7 +830,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/libmemunreachable.so
 
 # Camera (Arcsoft)
 vendor/lib64/libarcsoft_beautyshot.so
@@ -1125,8 +1125,8 @@ vendor/lib64/libwvkeybox.so
 
 # Display (Calibration)
 vendor/etc/cust_color.xml
-vendor/etc/fstb.cfg
 vendor/etc/dsi_l16s_36_02_0a_dsc_vdo_mi.xml
+vendor/etc/fstb.cfg
 
 # Display (Hardware)
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895
@@ -1286,45 +1286,45 @@ vendor/bin/displayfeature
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib/libMiDispDevManager.so
+vendor/lib/libcolortempmode.so
 vendor/lib/libdisplayfeature.so
 vendor/lib/libdisplayfeatureservice.so
+vendor/lib/libdither.so
+vendor/lib/libdrm.so
+vendor/lib/libeyecare.so
+vendor/lib/libflatbuffers-cpp.so
+vendor/lib/libflatmode.so
+vendor/lib/libmiBrightness.so
+vendor/lib/libmiXmlParser.so
+vendor/lib/libmi_dspp.so
+vendor/lib/libsdr2hdr.so
+vendor/lib/libsre.so
+vendor/lib/libtruetone.so
+vendor/lib/libvideomode.so
 vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib64/libMiDispDevManager.so
+vendor/lib64/libcolortempmode.so
 vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib64/libvideomode.so
-vendor/lib/libvideomode.so
-vendor/lib64/libmiBrightness.so
-vendor/lib64/libMiDispDevManager.so
-vendor/lib/libmiBrightness.so
-vendor/lib/libMiDispDevManager.so
-vendor/lib/libmi_dspp.so
-vendor/lib64/libmi_dspp.so
-vendor/lib64/libsdr2hdr.so
-vendor/lib64/libsdk_sr.so
-vendor/lib/libsdr2hdr.so
-vendor/lib64/libflatmode.so
-vendor/lib64/libflatbuffers-cpp.so
-vendor/lib/libflatbuffers-cpp.so
-vendor/lib/libflatmode.so
-vendor/lib64/libcolortempmode.so
-vendor/lib/libcolortempmode.so
-vendor/lib/libtruetone.so
-vendor/lib64/libtruetone.so
-vendor/lib/libsre.so
-vendor/lib64/libsre.so
-vendor/lib64/librelight_only.so
-vendor/lib64/libpaperMode.so
-vendor/lib64/libdrm.so
-vendor/lib/libdrm.so
-vendor/lib/libmiXmlParser.so
-vendor/lib64/libmiXmlParser.so
 vendor/lib64/libdither.so
+vendor/lib64/libdrm.so
 vendor/lib64/libeyecare.so
-vendor/lib/libdither.so
-vendor/lib/libeyecare.so
+vendor/lib64/libflatbuffers-cpp.so
+vendor/lib64/libflatmode.so
+vendor/lib64/libmiBrightness.so
+vendor/lib64/libmiXmlParser.so
+vendor/lib64/libmi_dspp.so
+vendor/lib64/libpaperMode.so
+vendor/lib64/librelight_only.so
+vendor/lib64/libsdk_sr.so
+vendor/lib64/libsdr2hdr.so
+vendor/lib64/libsre.so
+vendor/lib64/libtruetone.so
+vendor/lib64/libvideomode.so
+vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Display config
 vendor/etc/AbnormalDisplayLog_dynamic.xml
@@ -1365,6 +1365,7 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 vendor/etc/dolby_vision.cfg
+vendor/lib/libcodec2_vpp_dolby_plugin.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdeccfg.so
 vendor/lib/libdolbyeglplugin.so
@@ -1372,6 +1373,7 @@ vendor/lib/libdolbyottcameracontrol.so
 vendor/lib/libdolbyplugin.so
 vendor/lib/libstagefrightdolby.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libcodec2_vpp_dolby_plugin.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdlbdsservice.so
@@ -1381,8 +1383,6 @@ vendor/lib64/libdolbyplugin.so
 vendor/lib64/libstagefrightdolby.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib/libcodec2_vpp_dolby_plugin.so
-vendor/lib64/libcodec2_vpp_dolby_plugin.so
 
 # Dumpfaultd
 vendor/bin/mt6895/dumpfaultd.mt6895
@@ -1413,17 +1413,17 @@ vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
 
 # Fingerprint
 vendor/lib/hw/fingerprint.fpc.so
-vendor/lib64/hw/fingerprint.fpc.so
 vendor/lib/vendor.xiaomi.hardware.fx.tunnel@1.0.so
+vendor/lib64/hw/fingerprint.fpc.so
 vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
 # Factory debug
 vendor/bin/factory
 vendor/etc/init/init.factory.rc
 vendor/lib/libminiui.so
+vendor/lib/libpixelflinger.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libminiui.so
-vendor/lib/libpixelflinger.so
 vendor/lib64/libpixelflinger.so
 
 # FFU
@@ -1710,16 +1710,16 @@ vendor/etc/MNL_Config.xml
 vendor/etc/mpe.conf
 vendor/etc/xgf.cfg
 vendor/lib/hw/gps.default.so
+vendor/lib/librpc.so
 vendor/lib/libviagpsrpc.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/librpc.so
+vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
-vendor/lib/librpc.so
-vendor/lib64/librpc.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.mitee.so
@@ -1790,6 +1790,8 @@ vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libmp3dec_mtk.so
 vendor/lib/libmp4enc_sa.ca7.so
 vendor/lib/libmp4enc_xa.ca7.so
+vendor/lib/libopus.so
+vendor/lib/libsfplugin_ccodec_utils.so
 vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib/libthha.so
 vendor/lib/libvc1dec_sa.ca7.so
@@ -1816,13 +1818,11 @@ vendor/lib64/libformatter.so
 vendor/lib64/libhdrvideo.so
 vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/libmp3dec_mtk.so
+vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libthha.so
 vendor/lib64/libvcodec_oal.so
 vendor/lib64/libvcodecdrv_header_stub.so
-vendor/lib/libsfplugin_ccodec_utils.so
-vendor/lib64/libsfplugin_ccodec_utils.so
-vendor/lib/libopus.so
 
 # Media (Configs)
 vendor/etc/media_codecs_dolby_audio.xml
@@ -2067,17 +2067,17 @@ vendor/lib/libarmnn_ndk.mtk.vndk.so
 vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib/libruy.so
+vendor/lib/libtextclassifier_hash.so
+vendor/lib/libtflite_mtk.so
 vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
-vendor/lib/libtextclassifier_hash.so
-vendor/lib64/libtflite_mtk.so
-vendor/lib/libtflite_mtk.so
-vendor/lib/libruy.so
 vendor/lib64/libruy.so
+vendor/lib64/libtflite_mtk.so
 
 # Neural networks (APUware)
 vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
@@ -2144,11 +2144,11 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 # Network Operation
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
+vendor/lib/libnwk_opt_halwrap_vendor.so
+vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib64/libnwk_opt_halwrap_vendor.so
 vendor/lib64/nwk_opt_imp.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib/libnwk_opt_halwrap_vendor.so
-vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 
 # Otrpagent
 vendor/bin/vendor.xiaomi.hardware.otrpagent@2.0-service
@@ -2272,6 +2272,8 @@ vendor/lib/libmtknetutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
 vendor/lib/libmtksysutils.so
+vendor/lib/libpaperMode.so
+vendor/lib/libpcap.so
 vendor/lib/libpkm.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
@@ -2306,6 +2308,7 @@ vendor/lib64/libmtkrillog.so
 vendor/lib64/libmtkrilutils.so
 vendor/lib64/libmtksysutils.so
 vendor/lib64/libmtkutils.so
+vendor/lib64/libpcap.so
 vendor/lib64/libpkm.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librilfusion.so
@@ -2319,9 +2322,6 @@ vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
-vendor/lib/libpcap.so
-vendor/lib64/libpcap.so
-vendor/lib/libpaperMode.so
 
 # Radio (Config)
 vendor/etc/ecc_list.xml
@@ -2364,8 +2364,8 @@ system/system/etc/xcap-apns-conf.xml:etc/xcap-apns-conf.xml
 # Secure element
 vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service
 vendor/etc/init/vendor.xiaomi.hardware.secure_element@1.2-service.rc
-vendor/lib64/libmigpese@1.0.so
 vendor/lib/libmigpese@1.0.so
+vendor/lib64/libmigpese@1.0.so
 
 # Security
 vendor/etc/md/cacerts/ikev2/DigiCertGlobalRootCA.crt
@@ -2577,16 +2577,16 @@ vendor/etc/permissions/vendor.xiaomi.sensor.citsensorservice.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@1.1-service.xml
 vendor/lib/hw/sensors.mius.proximity.so
 vendor/lib/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so
+vendor/lib/libmiSensorCtrl.so
 vendor/lib/libssccalapi.so
+vendor/lib/libultrasound.so
 vendor/lib/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib64/hw/sensors.mius.proximity.so
 vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so
 vendor/lib64/libmiSensorCtrl.so
 vendor/lib64/libssccalapi.so
-vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
-vendor/lib/libmiSensorCtrl.so
-vendor/lib/libultrasound.so
 vendor/lib64/libultrasound.so
+vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 
 # Sensors (Communicate)
 vendor/bin/hw/vendor.xiaomi.sensor.communicate@1.0-service
