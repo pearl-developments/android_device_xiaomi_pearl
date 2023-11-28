@@ -1114,7 +1114,6 @@ vendor/lib/libwvhidl.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
@@ -2015,7 +2014,6 @@ vendor/bin/pnscr-mi
 vendor/bin/pnscr-rf
 vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/1-SN1X0_SPC.txt
-vendor/lib/jcos_nq_client-v1.so
 vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libnxpsmartpaparser.so
 vendor/lib/libsn100u_fw.so
