@@ -33,7 +33,7 @@ sh_binary {
 prebuilt_etc {
     name: "init.aee.rc",
     src: "etc/init.aee.rc",
-    subdir: "init/hw",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
