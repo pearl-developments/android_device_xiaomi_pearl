@@ -1051,8 +1051,8 @@ vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 
 # Charger
-system/system/lib/vendor.xiaomi.hardware.micharge@1.0.so
-system/system/lib64/vendor.xiaomi.hardware.micharge@1.0.so
+system/system/lib/vendor.xiaomi.hardware.micharge@1.0.so:lib/vendor.xiaomi.hardware.micharge@1.0.so
+system/system/lib64/vendor.xiaomi.hardware.micharge@1.0.so:lib64/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
 vendor/bin/batterysecret
 vendor/bin/smartcharging
@@ -1279,7 +1279,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
 # Display (Xiaomi)
-system/system/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
+system/system/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/bin/displayfeature
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
@@ -1357,8 +1357,8 @@ vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
 vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 
 # Dolby (Hardware)
-system/system/lib/vendor.dolby.hardware.dms@2.0.so
-system/system/lib64/vendor.dolby.hardware.dms@2.0.so
+system/system/lib/vendor.dolby.hardware.dms@2.0.so:lib/vendor.dolby.hardware.dms@2.0.so
+system/system/lib64/vendor.dolby.hardware.dms@2.0.so:lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
